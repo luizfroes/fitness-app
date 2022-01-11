@@ -1,8 +1,11 @@
 const { Router } = require("express");
 
 const {
-  renderDashboard,
+  renderRoutines,
   renderLogout,
+  renderRoutine,
+  renderExercises,
+  renderExercise,
 } = require("../../controllers/view/private");
 
 const router = Router();
