@@ -3,31 +3,41 @@ const sequelize = require("../config/connection");
 
 class Routines extends Model {}
 
-Routines.init({
+Routines.init(
+  {
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     date: {
-        type: DataTypes.DATE,
-        allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false,
     },
     time_start: {
-        type: DataTypes.TIME,
-        allowNull: false,
+      type: DataTypes.TIME,
+      allowNull: false,
     },
     time_end: {
-        type: DataTypes.TIME,
-        allowNull: false,
+      type: DataTypes.TIME,
+      allowNull: false,
     },
-}, {
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "users",
+        key: "id",
+      },
+    },
+  },
+  {
     sequelize,
     timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "routines",
-});
+  }
+);
 
 module.exports = Routines;
