@@ -23,7 +23,7 @@ Routines.init({
         allowNull: false,
     },
     exercise_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.ARRAY(DataTypes.INTEGER),
         references: {
             model: "exercises",
             key: "id",
