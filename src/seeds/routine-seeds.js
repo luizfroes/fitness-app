@@ -1,36 +1,30 @@
 const Routines = require("../models/Routines");
 
-routineData = [
-  {
-    date: 1 / 1 / 22,
-    time_start: 1.0,
-    time_end: 2.0,
-    exercise_id: [1, 2, 3],
-  },
-  {
-    date: 2 / 1 / 22,
-    time_start: 2.0,
-    time_end: 3.3,
-    exercise_id: [2, 3],
-  },
-  {
-    date: 1 / 1 / 22,
-    time_start: 5.0,
-    time_end: 6.0,
-    exercise_id: [4, 2, 1],
-  },
-  {
-    date: 8 / 1 / 22,
-    time_start: 3.0,
-    time_end: 4.0,
-    exercise_id: [3],
-  },
-  {
-    date: 5 / 1 / 22,
-    time_start: 1.0,
-    time_end: 2.0,
-    exercise_id: [5, 6],
-  },
+routineData = [{
+        date: new Date("01/01/2022"),
+        time_start: "18:30:00",
+        time_end: "19:30:00",
+    },
+    {
+        date: new Date("02/01/2022"),
+        time_start: "15:30:00",
+        time_end: "16:30:00",
+    },
+    {
+        date: new Date("01/01/2022"),
+        time_start: "17:00:00",
+        time_end: "18:00:00",
+    },
+    {
+        date: new Date("08/01/2022"),
+        time_start: "15:00:00",
+        time_end: "16:00:00",
+    },
+    {
+        date: new Date("05/01/2022"),
+        time_start: "13:00:00",
+        time_end: "14:00:00",
+    },
 ];
 
 const seedRoutines = () => Routines.bulkCreate(routineData);
