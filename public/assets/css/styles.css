@@ -1,3 +1,65 @@
+/* Basic Styles */
+
+body {
+    background-color: lightgray;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+
+/* Login Page Styles */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+.login-control {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.login-control input[type="email"] {
+    padding: 0.5rem;
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+    border: unset;
+}
+
+.login-control input[type="password"] {
+    padding: 0.5rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border: unset;
+}
+
+.login-button {
+    cursor: pointer;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    border: unset;
+}
+
+.login-button:hover {
+    transition: all 0.5s ease-out;
+    background-color: rgb(0, 211, 211);
+}
+
+
+/* Navigation Bar Styles */
+
 .nav-border-top {
     border-top: 1px solid black;
 }
@@ -13,5 +75,18 @@
     .nav-border-right {
         padding-right: 1rem;
         border-right: 1px solid black;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .login-form {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .login-form {
+        padding: 0.5rem;
+        width: 100%;
     }
 }
