@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Routines extends Model {}
+class Routine extends Model {}
 
-Routines.init(
+Routine.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -40,4 +40,4 @@ Routines.init(
   }
 );
 
-module.exports = Routines;
+module.exports = Routine;

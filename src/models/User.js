@@ -3,14 +3,14 @@ const { Model, DataTypes } = require("sequelize");
 const connection = require("../config/connection");
 const hooks = require("../hooks/hashPassword");
 
-class Users extends Model {
+class User extends Model {
   async checkPassword(userPassword) {
     const isValid = await bcrypt.compare(userPassword, this.password);
     return isValid;
   }
 }
 
-Users.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -69,4 +69,4 @@ Users.init(
   }
 );
 
-module.exports = Users;
+module.exports = User;
