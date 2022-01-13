@@ -1,0 +1,17 @@
+.nav-border-top {
+    border-top: 1px solid black;
+}
+
+.nav-border-right {
+    border-right: unset;
+}
+
+@media all and (min-width: 992px) {
+    .nav-border-top {
+        border-top: unset;
+    }
+    .nav-border-right {
+        padding-right: 1rem;
+        border-right: 1px solid black;
+    }
+}
