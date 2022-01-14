@@ -5,23 +5,27 @@
         <section class="signup-form" >
             <form class="form" id="signup-form">
 			    <h2 class="signup-header">Sign Up</h2>
-                <label>Name: *</label>
+                <label>Name *</label>
                     <section class="signup-name-control">
 				        <input  id="first-name-input" class="first-name-input" type="text" placeholder="First Name" />
 				        <input id="last-name-input" class="last-name-input" type="text" placeholder="Last Name" />
 			        </section>
-                    <label>Email: *</label>
+                    <label>Username *</label>
+                    <section class="signup-username-control">
+				        <input id="username-input" type="text" placeholder="Username" />
+			        </section>
+                    <label>Email *</label>
 			        <section class="signup-email-control">
 				        <input id="email-input" type="email" placeholder="Email Address" />
 			        </section>
-                    <label>Password: *</label>
+                    <label>Password *</label>
                     <section class="signup-password-control">
 				        <input id="password-input" class="password-input" type="password" placeholder="Password" />
 				        <input id="confirm-password-input" class="confirm-password-input" type="password" placeholder="Confirm Password" />
 			        </section>
-                    <label>Age: *</label>
                     <section class="signup-age-control">
-				        <select class="age-select">
+                        <label>Age *:</label>
+				        <select class="age-select" id="age-select">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
