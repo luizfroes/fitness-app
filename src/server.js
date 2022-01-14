@@ -11,15 +11,15 @@ const connection = require("./config/connection");
 const PORT = process.env.PORT || 4000;
 
 const sessionOptions = {
-  secret: process.env.SESSION_SECRET,
-  cookie: {
-    maxAge: 86400 * 1000,
-  },
-  resave: false,
-  saveUninitialized: false,
-  store: new sequelizeStore({
-    db: connection,
-  }),
+    secret: process.env.SESSION_SECRET,
+    cookie: {
+        maxAge: 86400 * 1000,
+    },
+    resave: false,
+    saveUninitialized: false,
+    store: new sequelizeStore({
+        db: connection,
+    }),
 };
 
 const handlebars = expressHandlebars.create({});
@@ -35,16 +35,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-const init = async () => {
-  try {
-    await connection.sync({ force: false });
+const init = async() => {
+    try {
+        await connection.sync({ force: false });
 
-    app.listen(PORT, () =>
-      console.log(`🚀🚀 Server running on http://localhost:${PORT} 🚀🚀`)
-    );
-  } catch (err) {
-    console.log(`[ERROR]: Connection to DB fails - ${err.message}`);
-  }
+        app.listen(PORT, () =>
+            console.log(`🚀🚀 Server running on http://localhost:${PORT} 🚀🚀`)
+        );
+    } catch (err) {
+        console.log(`[ERROR]: Connection to DB fails - ${err.message}`);
+    }
 };
 
 init();
