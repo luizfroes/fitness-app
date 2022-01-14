@@ -5,54 +5,105 @@ body {
 }
 
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     margin: 2rem;
 }
 
 
-/* Login Page Styles */
+/* Form Styles - Login & Signup */
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
+.login-form,
+.signup-form {
     margin: 0 auto;
-    padding: 3rem;
-    text-align: center;
-    gap: 1rem;
+    width: 60%;
 }
 
-.login-control {
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 3rem;
+    width: 100%;
+}
+
+.signup-form input,
+.login-form input {
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+}
+
+.login-header,
+.signup-header,
+.copyright {
+    text-align: center;
+}
+
+.login-control,
+.signup-password-control {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     width: 100%;
 }
 
-.login-control input[type="email"] {
-    padding: 0.5rem;
-    border-top-right-radius: 0.3rem;
-    border-top-left-radius: 0.3rem;
-    border: unset;
+.signup-name-control {
+    display: flex;
+    flex-direction: row;
 }
 
-.login-control input[type="password"] {
-    padding: 0.5rem;
+.first-name-input {
+    border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
+    border: unset;
+    width: 100%;
+}
+
+.last-name-input {
+    border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
     border: unset;
+    width: 100%;
 }
 
-.login-button {
+.signup-email-control input[type="email"] {
+    border-radius: 0.3rem;
+    border: unset;
+    width: 100%;
+}
+
+.login-control input[type="email"],
+.signup-password-control .password-input {
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+}
+
+.login-control input[type="password"],
+.signup-password-control .confirm-password-input {
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.signup-age-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-select {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: unset;
+    width: 25%;
+}
+
+.login-button,
+.signup-button {
     cursor: pointer;
     height: 2.5rem;
     border-radius: 0.3rem;
     border: unset;
 }
 
-.login-button:hover {
+.login-button:hover,
+.signup-button:hover {
     transition: all 0.5s ease-out;
     background-color: rgb(0, 211, 211);
 }
@@ -79,14 +130,25 @@ body {
 }
 
 @media all and (max-width: 768px) {
+    .form {
+        padding: unset;
+    }
+    .signup-form,
     .login-form {
-        width: 90%;
+        width: 80%;
+    }
+    .signup-name-control {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
 @media all and (max-width: 425px) {
     .login-form {
-        padding: 0.5rem;
+        width: 100%;
+    }
+    .signup-form {
         width: 100%;
     }
 }
