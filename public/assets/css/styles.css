@@ -25,13 +25,15 @@ body {
     width: 100%;
 }
 
-.signup-form input {
+.signup-form input,
+.login-form input {
     border: 1px solid #ced4da;
     padding: 0.5rem;
 }
 
+.login-header,
 .signup-header,
-.signup-copy {
+.copyright {
     text-align: center;
 }
 
@@ -131,11 +133,9 @@ body {
     .form {
         padding: unset;
     }
+    .signup-form,
     .login-form {
-        width: 90%;
-    }
-    .signup-form {
-        width: 90%;
+        width: 80%;
     }
     .signup-name-control {
         display: flex;
@@ -146,7 +146,6 @@ body {
 
 @media all and (max-width: 425px) {
     .login-form {
-        padding: 0.5rem;
         width: 100%;
     }
     .signup-form {
