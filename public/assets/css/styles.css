@@ -29,6 +29,7 @@ body {
 .login-form input {
     border: 1px solid #ced4da;
     padding: 0.5rem;
+    width: 100%;
 }
 
 .login-header,
@@ -41,8 +42,6 @@ body {
 .signup-password-control {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 100%;
 }
 
 .signup-name-control {
@@ -54,30 +53,28 @@ body {
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
     border: unset;
-    width: 100%;
 }
 
 .last-name-input {
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
     border: unset;
-    width: 100%;
 }
 
+.signup-username-control input[type="text"],
 .signup-email-control input[type="email"] {
     border-radius: 0.3rem;
     border: unset;
-    width: 100%;
 }
 
 .login-control input[type="email"],
-.signup-password-control .password-input {
+.password-input {
     border-top-right-radius: 0.3rem;
     border-top-left-radius: 0.3rem;
 }
 
 .login-control input[type="password"],
-.signup-password-control .confirm-password-input {
+.confirm-password-input {
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
 }
