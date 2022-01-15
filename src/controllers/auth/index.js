@@ -78,7 +78,9 @@ const signup = async(req, res) => {
         const usernameExists = await User.findOne({
             where: { user_name: req.body.user_name },
         });
-        const emailExists = await User.findOne({ where: { email: req.body.email } });
+        const emailExists = await User.findOne({
+            where: { email: req.body.email },
+        });
 
         if (usernameExists) {
             return res.status(409).json({
@@ -107,7 +109,16 @@ const signup = async(req, res) => {
 };
 
 const logout = async(req, res) => {
-    res.send("logout");
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            return res.json({ success: true, data: "Successfully logged out" });
+        });
+    } else {
+        return res.status(404).json({
+            success: false,
+            error: "Cannot logout when you are not logged in",
+        });
+    }
 };
 
 module.exports = {
