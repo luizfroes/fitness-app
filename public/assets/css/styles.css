@@ -9,6 +9,55 @@ body {
 }
 
 
+/* Dashboard Styles */
+
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.aside-container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: inherit;
+    gap: 1rem;
+    height: 100%;
+    margin-right: 1rem;
+    background-color: lightgray;
+    border-radius: 0.3rem;
+    box-shadow: 0 5px 5px 0 rgb(159, 158, 158);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-name {
+    text-align: center;
+    padding: 1rem 3rem;
+}
+
+.profile-padding {
+    padding-bottom: 1rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    text-align: center;
+}
+
+.user-goals {
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
 /* Form Styles - Login & Signup */
 
 .login-form,
@@ -127,6 +176,15 @@ body {
 }
 
 @media all and (max-width: 768px) {
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+    .profile-card {
+        padding: 0 2rem;
+    }
+    .profile-name {
+        padding: unset;
+    }
     .form {
         padding: unset;
     }
@@ -142,6 +200,9 @@ body {
 }
 
 @media all and (max-width: 425px) {
+    .profile-card {
+        padding: unset;
+    }
     .login-form {
         width: 100%;
     }
