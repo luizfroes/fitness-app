@@ -12,7 +12,24 @@ const renderSignUp = (req, res) => {
 };
 
 const renderRoutines = async (req, res) => {
-  res.render("routines");
+  const routines = await Routine.findAll({
+    include: [
+      {
+        model: Exercise,
+        through: ExerciseRoutine,
+      },
+      {
+        model: User,
+      },
+    ],
+  });
+
+  const allRoutines = routines.map((each) => {
+    return each.get({
+      plain: true,
+    });
+  });
+  res.render("routines", { allRoutines });
 };
 
 const renderRoutine = async (req, res) => {
