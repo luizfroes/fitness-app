@@ -1,4 +1,3 @@
-console.log("Hello, world!!");
 const targetSearch = $("#exTargetBtn");
 
 const signUpFormElement = $("#signup-form");
