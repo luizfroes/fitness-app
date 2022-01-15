@@ -1,3 +1,113 @@
+/* Basic Styles */
+
+body {
+    background-color: lightgray;
+}
+
+.content-wrapper {
+    margin: 2rem;
+}
+
+
+/* Form Styles - Login & Signup */
+
+.login-form,
+.signup-form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 3rem;
+    width: 100%;
+}
+
+.signup-form input,
+.login-form input {
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.login-header,
+.signup-header,
+.copyright {
+    text-align: center;
+}
+
+.login-control,
+.signup-password-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-name-control {
+    display: flex;
+    flex-direction: row;
+}
+
+.first-name-input {
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border: unset;
+}
+
+.last-name-input {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border: unset;
+}
+
+.signup-username-control input[type="text"],
+.signup-email-control input[type="email"] {
+    border-radius: 0.3rem;
+    border: unset;
+}
+
+.login-control input[type="email"],
+.password-input {
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+}
+
+.login-control input[type="password"],
+.confirm-password-input {
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.signup-age-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-select {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: unset;
+    width: 25%;
+}
+
+.login-button,
+.signup-button {
+    cursor: pointer;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    border: unset;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    transition: all 0.5s ease-out;
+    background-color: rgb(0, 211, 211);
+}
+
+
+/* Navigation Bar Styles */
+
 .nav-border-top {
     border-top: 1px solid black;
 }
@@ -13,5 +123,29 @@
     .nav-border-right {
         padding-right: 1rem;
         border-right: 1px solid black;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .form {
+        padding: unset;
+    }
+    .signup-form,
+    .login-form {
+        width: 80%;
+    }
+    .signup-name-control {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .login-form {
+        width: 100%;
+    }
+    .signup-form {
+        width: 100%;
     }
 }

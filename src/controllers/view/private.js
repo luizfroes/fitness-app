@@ -1,32 +1,32 @@
-const renderDashboard = async(req, res) => {
-    res.render("dashboard");
+const renderDashboard = async (req, res) => {
+  res.render("dashboard");
 };
 
-const renderRoutines = async(req, res) => {
-    res.render("routines");
+const renderRoutines = async (req, res) => {
+  res.render("routines");
 };
 
-const renderRoutine = async(req, res) => {
-    res.send("renderRoutine");
+const renderRoutine = async (req, res) => {
+  res.send("renderRoutine");
 };
 
-const renderExercises = async(req, res) => {
-    res.render("exercises");
+const renderExercises = async (req, res) => {
+  res.render("exercises");
 };
 
-const renderExercise = async(req, res) => {
-    res.send("renderExercise");
+const renderExercise = async (req, res) => {
+  res.send("renderExercise");
 };
 
-const renderLogout = async(req, res) => {
-    res.send("renderLogout");
+const renderLogout = async (req, res) => {
+  res.render("logout");
 };
 
 module.exports = {
-    renderLogout,
-    renderRoutines,
-    renderRoutine,
-    renderExercises,
-    renderExercise,
-    renderDashboard,
+  renderLogout,
+  renderRoutines,
+  renderRoutine,
+  renderExercises,
+  renderExercise,
+  renderDashboard,
 };
