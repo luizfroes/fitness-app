@@ -1,4 +1,5 @@
 const signUpFormElement = $("#signup-form");
+const loginFormElement = $("#login-form");
 
 const handleSignUp = async(event) => {
     event.preventDefault();
@@ -44,4 +45,38 @@ const handleSignUp = async(event) => {
     }
 };
 
+const handleLogin = async(event) => {
+    event.preventDefault();
+
+    const email = $("#email-input").val();
+    const password = $("#password-input").val();
+
+    if (!email) {
+        alert("Please provide an email and password");
+    } else if (!password) {
+        alert("Please provide a password");
+    } else {
+        const response = await fetch("/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email,
+                password,
+            }),
+        });
+
+        const data = await response.json();
+
+        console.log(data);
+
+        if (data.success) {
+            alert("Login Successful");
+            window.location.replace("/dashboard");
+        }
+    }
+};
+
 signUpFormElement.on("submit", handleSignUp);
+loginFormElement.on("submit", handleLogin);

@@ -23,11 +23,11 @@ const login = async(req, res) => {
         if (!user) {
             return res.status(404).json({
                 success: false,
-                error: "Please provide a valid Email!",
+                error: "Oops!! Email does not exists",
             });
         }
 
-        const validPassword = await User.checkPassword(payload.password);
+        const validPassword = await user.checkPassword(payload.password);
 
         if (!validPassword) {
             return res.status(401).json({
