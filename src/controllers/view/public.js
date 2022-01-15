@@ -1,3 +1,5 @@
+const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
+
 const renderLogin = (req, res) => {
   res.render("login");
 };
@@ -12,6 +14,8 @@ const renderSignUp = (req, res) => {
 };
 
 const renderRoutines = async (req, res) => {
+  const { loggedIn } = req.session;
+
   const routines = await Routine.findAll({
     include: [
       {
@@ -29,11 +33,29 @@ const renderRoutines = async (req, res) => {
       plain: true,
     });
   });
-  res.render("routines", { allRoutines });
+  res.render("routines", { loggedIn, allRoutines });
 };
 
 const renderRoutine = async (req, res) => {
-  res.send("renderRoutine");
+  const { loggedIn } = req.session;
+
+  const routineData = await Routine.findByPk(req.params.id, {
+    include: [
+      {
+        model: Exercise,
+        through: ExerciseRoutine,
+      },
+      {
+        model: User,
+      },
+    ],
+  }).catch((err) => {
+    res.json(err);
+  });
+
+  const routine = routineData.get({ plain: true });
+
+  res.render("routine", { loggedIn, routine });
 };
 
 const renderExercises = async (req, res) => {
