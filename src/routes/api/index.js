@@ -9,9 +9,12 @@ const {
   deleteRoutineById,
   getAllRoutines,
   getRoutineById,
+  getExercisesByTarget,
 } = require("../../controllers/api");
 
 const router = Router();
+
+router.get("/exercise/:target", getExercisesByTarget);
 
 router.get("/routines", getAllRoutines);
 router.get("/routines/:id", getRoutineById);
