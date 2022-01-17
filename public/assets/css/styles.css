@@ -253,11 +253,11 @@ body {
     flex-direction: column;
 }
 
-.age-select {
+.select {
     padding: 0.3rem;
     border-radius: 0.3rem;
     border: unset;
-    width: 25%;
+    width: fit-content;
 }
 
 .login-button,

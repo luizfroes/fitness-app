@@ -44,6 +44,7 @@ const login = async(req, res) => {
             age: `${user.get("age")}`,
             weight: `${user.get("weight")}`,
             height: `${user.get("height")}`,
+            location: `${user.get("location")}`,
         };
 
         req.session.save(() => {
@@ -64,11 +65,19 @@ const login = async(req, res) => {
 const signup = async(req, res) => {
     try {
         const payload = getPayloadWithValidFieldsOnly(
-            ["first_name", "last_name", "user_name", "email", "password", "age"],
+            [
+                "first_name",
+                "last_name",
+                "user_name",
+                "email",
+                "password",
+                "age",
+                "location",
+            ],
             req.body
         );
 
-        if (Object.keys(payload).length !== 6) {
+        if (Object.keys(payload).length !== 7) {
             return res.status(400).json({
                 success: false,
                 error: "Please provide all the valid fields in the post body!",

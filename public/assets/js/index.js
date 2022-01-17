@@ -15,6 +15,7 @@ const handleSignUp = async(event) => {
     const password = $("#password-input").val();
     const confirmPassword = $("#confirm-password-input").val();
     const age = $("#age-select :selected").text();
+    const location = $("#location-select :selected").text();
 
     if (password.length < 8) {
         alert("Password must be 8 or more characters");
@@ -35,6 +36,7 @@ const handleSignUp = async(event) => {
                 email,
                 password,
                 age,
+                location,
             }),
         });
 
