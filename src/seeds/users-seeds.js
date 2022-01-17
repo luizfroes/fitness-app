@@ -9,6 +9,7 @@ const userData = [{
         age: 20,
         weight: 65,
         height: 160,
+        location: "birmingham",
     },
     {
         first_name: "user2",
@@ -19,6 +20,7 @@ const userData = [{
         age: 22,
         weight: 62,
         height: 162,
+        location: "birmingham",
     },
     {
         first_name: "user3",
@@ -29,6 +31,7 @@ const userData = [{
         age: 23,
         weight: 63,
         height: 163,
+        location: "birmingham",
     },
     {
         first_name: "use4",
@@ -39,6 +42,7 @@ const userData = [{
         age: 24,
         weight: 64,
         height: 160,
+        location: "birmingham",
     },
     {
         first_name: "use5",
@@ -49,6 +53,7 @@ const userData = [{
         age: 25,
         weight: 65,
         height: 165,
+        location: "birmingham",
     },
 ];
 
