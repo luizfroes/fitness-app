@@ -17,12 +17,20 @@ const handleSignUp = async(event) => {
     const age = $("#age-select :selected").text();
     const location = $("#location-select :selected").text();
 
-    if (password.length < 8) {
+    if (!firstName || !lastName) {
+        alert("Please enter your full name");
+    } else if (!username) {
+        alert("Please enter a username");
+    } else if (password.length < 8) {
         alert("Password must be 8 or more characters");
     } else if (password.length > 20) {
         alert("Password must be 20 characters or less");
     } else if (password !== confirmPassword) {
         alert("Passwords do not match");
+    } else if (age === "Select an option") {
+        alert("Please enter your age");
+    } else if (location === "Select a location") {
+        alert("Please select a location");
     } else {
         const response = await fetch("/auth/signup", {
             method: "POST",
