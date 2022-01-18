@@ -53,8 +53,8 @@ const getRoutineById = async (req, res) => {
 };
 
 const getExercisesByTarget = async (req, res) => {
-  // console.log(req.params.target);
-  const URL = `https://exercisedb.p.rapidapi.com/exercises/target/${req.params.target}`;
+  console.log(req);
+  const URL = `https://exercisedb.p.rapidapi.com/exercises/target/${req}`;
 
   const { data } = await axios.get(URL, {
     headers: {
@@ -68,7 +68,7 @@ const getExercisesByTarget = async (req, res) => {
 
   console.log(selected);
 
-  res.json({ selected });
+  return selected;
 };
 
 module.exports = {

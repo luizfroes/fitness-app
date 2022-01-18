@@ -6,15 +6,18 @@ const handleExTarget = async (event) => {
   event.preventDefault();
   const target = $("#exTarget").val();
   //   console.log(target);
-  const response = await fetch(`/api/exercise/${target}`, {
+  const response = await fetch(`/exercises/${target}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
   });
 
-  const data = await response.json();
-  console.log(data);
+  if (response.ok) {
+    document.location.replace(`/exercises/${target}`);
+  } else {
+    alert("Failed to find exercises");
+  }
 };
 
 targetSearch.on("click", handleExTarget);
