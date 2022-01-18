@@ -28,7 +28,7 @@ const renderExercise = async (req, res) => {
 };
 
 const renderLogout = async (req, res) => {
-  res.send("renderLogout");
+  res.render("logout");
 };
 
 module.exports = {

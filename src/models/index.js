@@ -1,29 +1,29 @@
-const Users = require("../models/Users");
-const Exercises = require("../models/Exercises");
-const Routines = require("../models/Routines");
+const User = require("./User");
+const Exercise = require("./Exercise");
+const Routine = require("./Routine");
 const UserRoutine = require("../models/UserRoutine");
 const ExerciseRoutine = require("./ExerciseRoutine");
 
-Users.hasMany(Routines, {
+User.hasMany(Routine, {
   foreignKey: "user_id",
 });
 
-Routines.belongsTo(Users, {
+Routine.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Routines.belongsToMany(Exercises, {
+Routine.belongsToMany(Exercise, {
   through: { model: ExerciseRoutine, foreignKey: "routine_id" },
 });
 
-Exercises.belongsToMany(Routines, {
+Exercise.belongsToMany(Routine, {
   through: { model: ExerciseRoutine, foreignKey: "exercise_id" },
 });
 
 module.exports = {
-  Routines,
-  Exercises,
+  Routine,
+  Exercise,
   ExerciseRoutine,
   UserRoutine,
-  Users,
+  User,
 };

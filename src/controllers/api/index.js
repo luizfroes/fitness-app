@@ -1,17 +1,4 @@
-const axios = require("axios").default;
-const { Routines, Exercises, ExerciseRoutine, Users } = require("../../models");
-
-const login = async (req, res) => {
-  res.send("login");
-};
-
-const signup = async (req, res) => {
-  res.send("signup");
-};
-
-const logout = async (req, res) => {
-  res.send("logout");
-};
+const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
 
 const createNewRoutine = async (req, res) => {
   res.send("createNewRoutine");
@@ -72,13 +59,10 @@ const getExercisesByTarget = async (req, res) => {
 };
 
 module.exports = {
-  getExercisesByTarget,
-  login,
-  signup,
-  logout,
   createNewRoutine,
   updateRoutineById,
   deleteRoutineById,
   getRoutineById,
   getAllRoutines,
+  getExercisesByTarget,
 };
