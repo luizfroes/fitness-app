@@ -67,12 +67,18 @@ body {
 .quote-card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    height: 100%;
     width: 60%;
     padding: 1rem;
     background-color: lightgray;
     border-radius: 0.3rem;
     box-shadow: 5px 5px 15px rgb(177, 177, 177);
+}
+
+.quote-card p {
+    margin: 20% 0;
+    font-style: italic;
+    height: 100%;
 }
 
 .weather-card {
@@ -321,6 +327,9 @@ body {
     }
     .quote-card {
         width: 100%;
+    }
+    .quote-card p {
+        margin: 10%;
     }
     .weather-card {
         width: 100%;
