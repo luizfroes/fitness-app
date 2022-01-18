@@ -1,12 +1,15 @@
 <div class="card m-2">
-  <h5 class="card-header">Routine Title</h5>
-  <div class="card-body">
-    <h5 class="card-title">Created by:
+  <h5 class="card-header mb-1 text-center routine-card-title">Routine Title</h5>
+  <div class="card-body d-flex justify-content-between">
+    <h5 class="card-title align-middle">Created by:
       {{user.first_name}}
       {{user.last_name}}
     </h5>
-    <p class="card-text">Created at: {{createdAt}}</p>
-    <button class="btn btn-primary" id="routine-btn" data-id={{id}}>Check more
-      details</button>
+    <p class="card-text align-middle">Created at: {{createdAt}}</p>
+    <button
+      class="btn btn-primary btn-sm align-middle"
+      id="routine-btn"
+      data-id={{id}}
+    >Check more details</button>
   </div>
 </div>
