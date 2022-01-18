@@ -1,5 +1,17 @@
 <header>{{> privateNavBar}}</header>
 
 <main>
-    <h1>Dashboard Page</h1>
+    <section class="dashboard-wrapper">
+        <aside class="aside-container">
+            {{> profileCard}}
+        </aside>
+        <section class="main-container">
+            <section class="quote-weather-content">
+                {{> quoteCard}}
+                {{> weatherCard}}
+            </section>
+            {{> dashboardRoutineCard}}
+            {{> dashboardRoutineCard}}
+        </section>
+    </section>
 </main>
