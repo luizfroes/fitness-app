@@ -3,6 +3,10 @@
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>
     <p class="card-text">{{target}} :: {{bodyPart}}</p>
-    <a href="#" class="btn btn-primary">Add to routine</a>
+    <button
+      onclick="handleAddToRoutine({target:'{{target}}', id:'{{id}}', name:'{{name}}', image:'{{gifUrl}}'})"
+      href="#"
+      class="btn btn-primary"
+    >Add to routine</button>
   </div>
 </div>

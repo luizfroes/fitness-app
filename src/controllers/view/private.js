@@ -1,4 +1,4 @@
-const { getExercisesByTarget } = require("../api");
+const { getExercisesByTarget, getAllRoutines } = require("../api");
 
 const renderDashboard = async (req, res) => {
   res.render("dashboard");
@@ -13,10 +13,11 @@ const renderRoutine = async (req, res) => {
 };
 
 const renderExerciseByTarget = async (req, res) => {
-  //   console.log(req.params.target);
+  console.log(req.params.target);
   const selected = await getExercisesByTarget(req.params.target);
   console.log(selected);
-  res.render("exercises", { selected });
+  const routines = await getAllRoutines();
+  res.render("exercises", { selected, routines });
 };
 
 const renderExercises = async (req, res) => {

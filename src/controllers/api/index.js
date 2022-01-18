@@ -1,4 +1,5 @@
 const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
+const axios = require("axios").default;
 
 const createNewRoutine = async (req, res) => {
   res.send("createNewRoutine");
@@ -13,14 +14,14 @@ const deleteRoutineById = async (req, res) => {
 };
 
 const getAllRoutines = async (req, res) => {
-  const routines = await Routines.findAll({
+  const routines = await Routine.findAll({
     include: [
       {
-        model: Exercises,
+        model: Exercise,
         through: ExerciseRoutine,
       },
       {
-        model: Users,
+        model: User,
       },
     ],
   });
@@ -31,7 +32,8 @@ const getAllRoutines = async (req, res) => {
     });
   });
 
-  res.json({ data: allRoutines });
+  return allRoutines;
+  // res.json({ data: allRoutines });
   //res.send("getAllRoutines");
 };
 

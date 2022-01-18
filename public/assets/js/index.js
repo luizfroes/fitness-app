@@ -2,6 +2,8 @@ console.log("Hello, world!!");
 
 const targetSearch = $("#exTargetBtn");
 
+const addToRoutine = $("#addToRoutineBtns");
+
 const signUpFormElement = $("#signup-form");
 
 const logoutYesBtn = $(`#yes-logout`);
@@ -55,7 +57,7 @@ const handleSignUp = async (event) => {
 const handleExTarget = async (event) => {
   event.preventDefault();
   const target = $("#exTarget").val();
-  //   console.log(target);
+  console.log(target);
   const response = await fetch(`/exercises/${target}`, {
     method: "GET",
     headers: {
@@ -89,6 +91,11 @@ const handleNoLogout = () => {
   window.location.replace("/dashboard");
 };
 
+const handleAddToRoutine = async (exercise) => {
+  const target = $("#routTarget").val();
+  console.log(target);
+  console.log(exercise);
+};
 signUpFormElement.on("submit", handleSignUp);
 
 logoutYesBtn.on("click", handleYesLogout);
@@ -96,3 +103,5 @@ logoutYesBtn.on("click", handleYesLogout);
 logoutNoBtn.on("click", handleNoLogout);
 
 targetSearch.on("click", handleExTarget);
+
+addToRoutine.on("click", handleAddToRoutine);

@@ -16,7 +16,7 @@
     <option value="delts">Delts</option>
     <option value="forearms">Forearms</option>
     <option value="glutes">Glutes</option>
-    <option value="hamstring">Hamstrings</option>
+    <option value="hamstrings">Hamstrings</option>
     <option value="lats">Lats</option>
     <option value="levator scapulae">Levator scapulae</option>
     <option value="pectorals">Pectorals</option>
@@ -32,7 +32,19 @@
 </form>
     </div>
 
-    <div>
+     <div>
+        <form>
+  <label for="routineTarget">Select a routine:</label>
+  <select name="routineTarget" id="routTarget">
+    {{#each routines}}
+      {{> routineSelection}}
+      {{/each}}
+  </select>
+  <br><br>
+</form>
+    </div>
+
+    <div id="addToRoutineBtns">
       {{#each selected}}
       {{> exerciseCards}}
       {{/each}}</div>
