@@ -1,10 +1,12 @@
-const { getCurrentWeather } = require("../../utils");
+const { getCurrentWeather, getQuote } = require("../../utils");
 
 const renderDashboard = async(req, res) => {
     const { user } = req.session;
     const weather = await getCurrentWeather(user.location);
     const weatherIcon = weather.weather[0].icon;
-    return res.render("dashboard", { weather, weatherIcon });
+
+    const quote = await getQuote();
+    return res.render("dashboard", { weather, weatherIcon, quote });
 };
 
 const renderRoutines = async(req, res) => {
