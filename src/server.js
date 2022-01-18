@@ -1,4 +1,5 @@
 require("dotenv").config();
+const handlebarsHelpers = require("./helpers/handlebarsHelpers");
 const express = require("express");
 const session = require("express-session");
 const expressHandlebars = require("express-handlebars");
@@ -11,22 +12,24 @@ const connection = require("./config/connection");
 const PORT = process.env.PORT || 4000;
 
 const sessionOptions = {
-    secret: process.env.SESSION_SECRET,
-    cookie: {
-        maxAge: 86400 * 1000,
-    },
-    resave: false,
-    saveUninitialized: false,
-    store: new sequelizeStore({
-        db: connection,
-    }),
+  secret: process.env.SESSION_SECRET,
+  cookie: {
+    maxAge: 86400 * 1000,
+  },
+  resave: false,
+  saveUninitialized: false,
+  store: new sequelizeStore({
+    db: connection,
+  }),
 };
 
-const handlebars = expressHandlebars.create({});
+const handlebars = expressHandlebars.create({ helpers: handlebarsHelpers });
 const app = express();
 
 app.engine("handlebars", handlebars.engine);
 app.set("view engine", "handlebars");
+
+// MomentHandler.registerHelpers(handlebars);
 
 app.use(session(sessionOptions));
 app.use(express.static(path.join(__dirname, "../public")));
@@ -35,16 +38,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-const init = async() => {
-    try {
-        await connection.sync({ force: false });
+const init = async () => {
+  try {
+    await connection.sync({ force: false });
 
-        app.listen(PORT, () =>
-            console.log(`🚀🚀 Server running on http://localhost:${PORT} 🚀🚀`)
-        );
-    } catch (err) {
-        console.log(`[ERROR]: Connection to DB fails - ${err.message}`);
-    }
+    app.listen(PORT, () =>
+      console.log(`🚀🚀 Server running on http://localhost:${PORT} 🚀🚀`)
+    );
+  } catch (err) {
+    console.log(`[ERROR]: Connection to DB fails - ${err.message}`);
+  }
 };
 
 init();
