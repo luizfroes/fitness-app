@@ -64,14 +64,20 @@ body {
 }
 
 .quote-card {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 60%;
-  padding: 1rem;
-  background-color: lightgray;
-  border-radius: 0.3rem;
-  box-shadow: 5px 5px 15px rgb(177, 177, 177);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+}
+
+.quote-card p {
+    margin: 20% 0;
+    font-style: italic;
+    height: 100%;
 }
 
 .weather-card {
@@ -86,16 +92,17 @@ body {
 }
 
 .weather-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .weather-status {
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  background-color: lightgreen;
-  padding: 1rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: lightgreen;
+    height: fit-content;
 }
 
 .weather-info {
@@ -111,6 +118,18 @@ body {
 }
 
 .dashboard-routine-card,
+.no-routine-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 0.3rem;
+    box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
+    width: 100%;
+    height: fit-content;
+}
+
 .routine-card {
   display: flex;
   flex-direction: row;
@@ -314,11 +333,11 @@ body {
   flex-direction: column;
 }
 
-.age-select {
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  border: unset;
-  width: 25%;
+.select {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: unset;
+    width: fit-content;
 }
 
 .login-button,
@@ -365,60 +384,60 @@ body {
 }
 
 @media all and (max-width: 768px) {
-  /* Dashboard Styles */
-  .dashboard-wrapper {
-    flex-direction: column;
-  }
-
-  .aside-container {
-    margin-bottom: 1rem;
-    margin-right: unset;
-  }
-
-  .quote-weather-content {
-    gap: 1rem;
-    padding: unset;
-    flex-direction: column;
-  }
-
-  .quote-card {
-    width: 100%;
-  }
-
-  .weather-card {
-    width: 100%;
-  }
-
-  .profile-card {
-    padding: 0 2rem;
-  }
-
-  .routine-info {
-    justify-content: space-around;
-    flex-shrink: 1;
-    height: fit-content;
-    margin: 0 1rem;
-    margin-top: 1rem;
-    padding: unset;
-    gap: 1rem;
-  }
-  .routine-info-card {
-    width: 6rem;
-  }
-
-  /* Form Styles */
-  .form {
-    padding: unset;
-  }
-  .signup-form,
-  .login-form {
-    width: 80%;
-  }
-  .signup-name-control {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+    /* Dashboard Styles */
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+    .aside-container {
+        margin-bottom: 1rem;
+        margin-right: unset;
+    }
+    .quote-weather-content {
+        gap: 1rem;
+        padding: unset;
+        flex-direction: column;
+    }
+    .quote-card {
+        width: 100%;
+    }
+    .quote-card p {
+        margin: 10%;
+    }
+    .weather-card {
+        width: 100%;
+    }
+    .profile-card {
+        padding: 0 2rem;
+    }
+    .routine-card {
+        height: fit-content;
+    }
+    .routine-info {
+        justify-content: space-around;
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        height: fit-content;
+        margin: 0 1rem;
+        margin-top: 1rem;
+        padding: unset;
+        gap: 1rem;
+    }
+    .routine-info-card {
+        width: 140px;
+    }
+    /* Form Styles */
+    .form {
+        padding: unset;
+    }
+    .signup-form,
+    .login-form {
+        width: 80%;
+    }
+    .signup-name-control {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media all and (max-width: 425px) {
