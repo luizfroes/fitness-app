@@ -110,6 +110,7 @@ body {
   border-radius: 0.3rem;
 }
 
+.dashboard-routine-card,
 .routine-card {
   display: flex;
   flex-direction: row;
@@ -118,7 +119,10 @@ body {
   border-radius: 0.3rem;
   box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
   width: 100%;
-  height: 17rem;
+}
+
+.dashboard-routine-card {
+  height: 10rem;
 }
 
 .routine-section {
@@ -128,13 +132,18 @@ body {
   width: 70%;
 }
 
-.routine-title {
-  display: flex;
+.dashboard-routine-title {
+  padding-bottom: 1rem;
   flex-direction: row;
   justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.dashboard-routine-title,
+.routine-title {
+  display: flex;
   align-items: center;
   border-bottom: 2px solid #acacac;
-  padding-right: 1rem;
 }
 
 .routine-info {
@@ -142,27 +151,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   height: 50%;
-  margin: auto 0;
+  margin: 1rem 0;
   padding-right: 1rem;
 }
 
 .routine-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 1;
-  padding: 2em 0;
   border-radius: 0.3rem;
   box-shadow: 5px 5px 15px rgb(169, 169, 169);
   color: white;
   background-color: rgb(0, 157, 255);
-  width: 31%;
   text-align: center;
-}
-
-.routine-card-title {
-  padding: 1rem;
-  background-color: lightgray;
-  border-radius: 0.3rem;
-  box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
-  width: 100%;
 }
 
 .target-section {
@@ -178,10 +181,62 @@ body {
 
 .target-info {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .unset-margin {
   margin: unset;
+}
+
+.info-h4 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.title-h5,
+.targets-h5 {
+  font-size: 1.25rem !important;
+}
+
+/* Routines Styles */
+.routine-card {
+  height: 11rem;
+}
+.btn-routine-title {
+  flex-grow: 3;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: lightgray;
+  border: none;
+  font-size: 1.3rem;
+  height: 2.5rem;
+}
+
+.routine-exercise-card {
+  width: 100%;
+}
+
+.targets-h5 {
+  padding-bottom: 1rem;
+}
+
+.btn-routine-title:hover {
+  font-weight: bolder;
+}
+
+.author-h6 {
+  flex-grow: 1;
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.routine-date-card {
+  padding-top: 1rem;
 }
 
 /* Form Styles - Login & Signup */
@@ -314,31 +369,33 @@ body {
   .dashboard-wrapper {
     flex-direction: column;
   }
+
   .aside-container {
     margin-bottom: 1rem;
     margin-right: unset;
   }
+
   .quote-weather-content {
     gap: 1rem;
     padding: unset;
     flex-direction: column;
   }
+
   .quote-card {
     width: 100%;
   }
+
   .weather-card {
     width: 100%;
   }
+
   .profile-card {
     padding: 0 2rem;
   }
-  .routine-card {
-    height: fit-content;
-  }
+
   .routine-info {
     justify-content: space-around;
     flex-shrink: 1;
-    flex-wrap: wrap;
     height: fit-content;
     margin: 0 1rem;
     margin-top: 1rem;
@@ -346,8 +403,9 @@ body {
     gap: 1rem;
   }
   .routine-info-card {
-    width: 140px;
+    width: 6rem;
   }
+
   /* Form Styles */
   .form {
     padding: unset;
@@ -375,5 +433,77 @@ body {
   }
   .signup-form {
     width: 100%;
+  }
+  /* dashboard Styles */
+  .dashboard-routine-title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  .dashboard-routine-card,
+  .routine-card {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 20rem;
+  }
+
+  .title-h5 {
+    padding-bottom: 1rem;
+  }
+
+  .routine-section {
+    border: none;
+    width: 100%;
+    height: 8em;
+  }
+
+  .target-section {
+    border: none;
+    width: 100%;
+  }
+
+  .target-title {
+    border-bottom: none;
+  }
+
+  .card-title,
+  .target-title {
+    border-top: 2px solid #acacac;
+  }
+
+  .card-title,
+  .target-title {
+    margin-top: 1rem;
+  }
+
+  .card-title {
+    padding-top: 1rem;
+  }
+
+  .targets-h5 {
+    padding-bottom: 0rem;
+    padding-top: 1rem;
+  }
+
+  .target-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .routine-info-card {
+    padding: 0.5rem;
+    width: 7rem;
+  }
+
+  .date-h6 {
+    text-align: center;
+  }
+
+  .btn-routine-title {
+    padding-bottom: 1rem;
   }
 }
