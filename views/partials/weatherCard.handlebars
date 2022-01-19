@@ -1,0 +1,40 @@
+<div class="weather-card">
+	<div class="weather-title">
+		<div class="location">
+			<h6>Weather</h6>
+			<h5>{{weather.name}}</h5>
+		</div>
+		<div class="weather-status">
+			<p class="unset-margin">
+				<img
+					src="https://openweathermap.org/img/w/{{weatherIcon}}.png"
+					width="25"
+					height="25"
+				/>
+			</p>
+		</div>
+	</div>
+	<div class="weather-info">
+		<div class="weather-condition">
+			<p>&#127777;</p>
+			<p>{{weather.main.temp}}&#8451;</p>
+			<p>Temp</p>
+		</div>
+		<div class="weather-condition">
+			<p>&#9748;</p>
+			<p>
+				{{#if weather.rain}}
+					{{weather.rain}}cm
+				{{else}}
+					0cm
+				{{/if}}
+			</p>
+			<p>Rain</p>
+		</div>
+		<div class="weather-condition">
+			<p>&#9925;</p>
+			<p>{{weather.wind.speed}}mph</p>
+			<p class="unset-margin">Wind</p>
+		</div>
+	</div>
+</div>
