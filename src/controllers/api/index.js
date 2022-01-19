@@ -37,6 +37,31 @@ const getAllRoutines = async (req, res) => {
   //res.send("getAllRoutines");
 };
 
+const getRoutinesByUser = async (req, res) => {
+  const { loggedIn, user } = req.session;
+  console.log(req.session);
+  // const routines = await Routine.findAll({
+  //   include: [
+  //     {
+  //       model: Exercise,
+  //       through: ExerciseRoutine,
+  //     },
+  //     {
+  //       model: User,
+  //     },
+  //   ],
+  //   where: { user_id: user.id },
+  // });
+
+  // const allRoutines = routines.map((each) => {
+  //   return each.get({
+  //     plain: true,
+  //   });
+  // });
+
+  // return allRoutines;
+};
+
 const getRoutineById = async (req, res) => {
   res.send("getRoutineById");
 };
@@ -67,4 +92,5 @@ module.exports = {
   getRoutineById,
   getAllRoutines,
   getExercisesByTarget,
+  getRoutinesByUser,
 };
