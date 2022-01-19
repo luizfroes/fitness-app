@@ -104,7 +104,7 @@ const handleNoLogout = () => {
 const goToRoutine = (event) => {
   const target = $(event.target);
 
-  if (target.is("button")) {
+  if (target.is("button" || "h5")) {
     const routineId = target.data("id");
 
     window.location.replace(`/routines/${routineId}`);
@@ -115,4 +115,4 @@ signUpFormElement.on("submit", handleSignUp);
 loginFormElement.on("submit", handleLogin);
 logoutYesBtn.on("click", handleYesLogout);
 logoutNoBtn.on("click", handleNoLogout);
-$(`.routine-container`).on("click", goToRoutine);
+$(`.btn-routine-title`).on("click", goToRoutine);
