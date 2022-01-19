@@ -85,7 +85,24 @@ const getExercisesByTarget = async (req, res) => {
   return selected;
 };
 
-const createExercise = async (req, res) => {};
+const createExercise = async (req, res) => {
+  try {
+    const payload = getPayloadWithValidFieldsOnly(
+      ["exercise_name", "image", "target"],
+      req.body
+    );
+
+    if (Object.keys(payload).length !== 3) {
+      return res.status(400).json({ error: "Please provide a valid request" });
+    }
+
+    const exercise = await Exercise.create(payload);
+    return res.json(exercise);
+  } catch (err) {
+    console.log(`[ERROR]: Failed to create exercise | ${error.message}`);
+    return res.status(500).json({ error: "Failed to create exercise" });
+  }
+};
 
 module.exports = {
   createNewRoutine,
