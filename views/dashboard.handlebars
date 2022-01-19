@@ -10,8 +10,13 @@
                 {{> quoteCard}}
                 {{> weatherCard}}
             </section>
+            {{#if allRoutines}}
+            {{#each allRoutines}}
             {{> dashboardRoutineCard}}
-            {{> dashboardRoutineCard}}
+            {{/each}}
+            {{else}}
+            <section class="no-routine-card">You currently have no stored routines</section>
+            {{/if}}
         </section>
     </section>
 </main>
