@@ -38,28 +38,28 @@ const getAllRoutines = async (req, res) => {
 };
 
 const getRoutinesByUser = async (req, res) => {
-  const { loggedIn, user } = req.session;
+  const { user } = req.session;
   console.log(req.session);
-  // const routines = await Routine.findAll({
-  //   include: [
-  //     {
-  //       model: Exercise,
-  //       through: ExerciseRoutine,
-  //     },
-  //     {
-  //       model: User,
-  //     },
-  //   ],
-  //   where: { user_id: user.id },
-  // });
+  const routines = await Routine.findAll({
+    include: [
+      {
+        model: Exercise,
+        through: ExerciseRoutine,
+      },
+      {
+        model: User,
+      },
+    ],
+    where: { user_id: user.id },
+  });
 
-  // const allRoutines = routines.map((each) => {
-  //   return each.get({
-  //     plain: true,
-  //   });
-  // });
+  const allRoutines = routines.map((each) => {
+    return each.get({
+      plain: true,
+    });
+  });
 
-  // return allRoutines;
+  return allRoutines;
 };
 
 const getRoutineById = async (req, res) => {
@@ -85,6 +85,8 @@ const getExercisesByTarget = async (req, res) => {
   return selected;
 };
 
+const createExercise = async (req, res) => {};
+
 module.exports = {
   createNewRoutine,
   updateRoutineById,
@@ -93,4 +95,5 @@ module.exports = {
   getAllRoutines,
   getExercisesByTarget,
   getRoutinesByUser,
+  createExercise,
 };

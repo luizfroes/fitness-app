@@ -128,9 +128,28 @@ const handleNoLogout = () => {
 
 const handleAddToRoutine = async (exercise) => {
   const target = $("#routTarget").val();
-  console.log(target);
-  console.log(exercise);
+  //   console.log(target);
+  //   console.log(exercise);
+  const response = await fetch(`/api/routines/${target}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      exercise,
+    }),
+  });
+  const exCreate = await fetch(`/api/exercise/${target}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      exercise,
+    }),
+  });
 };
+
 signUpFormElement.on("submit", handleSignUp);
 
 logoutYesBtn.on("click", handleYesLogout);
@@ -140,3 +159,5 @@ logoutNoBtn.on("click", handleNoLogout);
 targetSearch.on("click", handleExTarget);
 
 addToRoutine.on("click", handleAddToRoutine);
+
+loginFormElement.on("submit", handleLogin);

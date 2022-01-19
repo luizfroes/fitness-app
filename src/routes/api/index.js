@@ -7,11 +7,14 @@ const {
   getAllRoutines,
   getRoutineById,
   getExercisesByTarget,
+  createExercise,
 } = require("../../controllers/api");
 
 const router = Router();
 
 router.get("/exercise/:target", getExercisesByTarget);
+
+router.post("/exercise/:target", createExercise);
 
 router.get("/routines", getAllRoutines);
 router.get("/routines/:id", getRoutineById);
