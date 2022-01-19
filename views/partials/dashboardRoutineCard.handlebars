@@ -1,8 +1,8 @@
-<section class="routine-card">
+<section class="routine-card" data="{{this.id}}">
 	<div class="routine-section">
 		<div class="routine-title">
-			<h5>Routine Name 1</h5>
-			<h6>Date</h6>
+			<h5>{{this.name}}</h5>
+			<h6>{{this.date}}</h6>
 		</div>
 		<div class="routine-info">
 			<div class="routine-info-card">
@@ -36,9 +36,9 @@
 			<h5>Targets</h5>
 		</div>
 		<div class="target-info">
-			<div>Arms</div>
-			<div>Legs</div>
-			<div>Chest</div>
+			{{#each exercises}}
+				<div>{{this.target}}</div>
+			{{/each}}
 		</div>
 	</div>
 </section>
