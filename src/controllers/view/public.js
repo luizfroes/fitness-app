@@ -33,7 +33,7 @@ const renderRoutines = async (req, res) => {
       plain: true,
     });
   });
-
+  console.log(allRoutines);
   res.render("routines", { loggedIn, allRoutines });
 };
 
@@ -55,9 +55,6 @@ const renderRoutine = async (req, res) => {
   });
 
   const routine = routineData.get({ plain: true });
-
-  console.log(loggedIn);
-  console.log(routine);
 
   res.render("routine", { loggedIn, routine });
 };
