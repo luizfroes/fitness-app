@@ -24,10 +24,10 @@ const renderRoutine = async (req, res) => {
 };
 
 const renderExerciseByTarget = async (req, res) => {
-  console.log(req.params.target);
+  //   console.log(req.params.target);
   const selected = await getExercisesByTarget(req.params.target);
-  console.log(selected);
-  console.log(req.session);
+  //   console.log(selected);
+  //   console.log(req.session);
   const routines = await getRoutinesByUser(req);
   res.render("exercises", { selected, routines });
 };

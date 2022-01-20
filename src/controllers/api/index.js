@@ -45,7 +45,7 @@ const getAllRoutines = async (req, res) => {
 
 const getRoutinesByUser = async (req, res) => {
   const { user } = req.session;
-  console.log(req.session);
+  // console.log(req.session);
   const routines = await Routine.findAll({
     include: [
       {
@@ -73,7 +73,7 @@ const getRoutineById = async (req, res) => {
 };
 
 const getExercisesByTarget = async (req, res) => {
-  console.log(req);
+  // console.log(req);
   const URL = `https://exercisedb.p.rapidapi.com/exercises/target/${req}`;
 
   const { data } = await axios.get(URL, {
@@ -86,7 +86,7 @@ const getExercisesByTarget = async (req, res) => {
   const shuffled = data.sort(() => 0.5 - Math.random());
   const selected = shuffled.slice(0, 6);
 
-  console.log(selected);
+  // console.log(selected);
 
   return selected;
 };
