@@ -426,6 +426,7 @@ body {
   padding: 2%;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  color: whitesmoke;
 }
 
 .routine-exercise-card-container img {
@@ -448,11 +449,17 @@ body {
   overflow-y: scroll;
   transition: 0.8s ease;
   width: 100%;
+  padding-top: 1rem;
 }
 
 .card-description {
   padding: 1rem;
   border-bottom: solid rgb(0, 157, 255) 2px;
+}
+
+.card-description-title {
+  font-weight: bolder;
+  background-color: rgb(0, 157, 255) 2px;
 }
 
 .routine-exercise-card-container:hover .card-container {
@@ -539,6 +546,10 @@ body {
 
   .aside-routine-container {
     margin-right: 0rem;
+  }
+
+  .routine-container {
+    height: 100%;
   }
 
   .cards {

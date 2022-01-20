@@ -55,7 +55,7 @@ const renderRoutine = async (req, res) => {
   });
 
   const routine = routineData.get({ plain: true });
-
+  console.log(routine);
   res.render("routine", { loggedIn, routine });
 };
 
