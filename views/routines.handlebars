@@ -1,5 +1,13 @@
-<header>{{> publicNavBar}}</header>
+<header>{{#if loggedIn}}
+  {{> privateNavBar}}
+  {{else}}
+  {{> publicNavBar}}
+  {{/if}}</header>
 
 <main>
-    <h1>Routines Page</h1>
+     <div class="routine-container m-3 rounded">
+      {{#each allRoutines as |routine|}}
+      {{> routineCard}}
+      {{/each}}
+    </div>
 </main>

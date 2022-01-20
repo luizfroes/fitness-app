@@ -69,7 +69,23 @@ const getRoutinesByUser = async (req, res) => {
 };
 
 const getRoutineById = async (req, res) => {
-  res.send("getRoutineById");
+  const routineData = await Routine.findByPk(req.params.id, {
+    include: [
+      {
+        model: Exercise,
+        through: ExerciseRoutine,
+      },
+      {
+        model: User,
+      },
+    ],
+  }).catch((err) => {
+    res.json(err);
+  });
+
+  const routine = routineData.get({ plain: true });
+
+  res.json({ data: routine });
 };
 
 const getExercisesByTarget = async (req, res) => {

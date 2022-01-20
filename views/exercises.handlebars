@@ -1,4 +1,8 @@
-<header>{{> publicNavBar}}</header>
+<header>{{#if loggedIn}}
+  {{> privateNavBar}}
+  {{else}}
+  {{> publicNavBar}}
+  {{/if}}</header>
 
 <main>
     <h1>Exercises Page</h1>

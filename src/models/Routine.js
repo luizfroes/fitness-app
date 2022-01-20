@@ -23,6 +23,10 @@ Routine.init(
       type: DataTypes.TIME,
       allowNull: false,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

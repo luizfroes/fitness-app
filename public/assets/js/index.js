@@ -11,13 +11,12 @@ const logoutYesBtn = $(`#yes-logout`);
 const loginFormElement = $("#login-form");
 
 const logoutNoBtn = $(`#no-logout`);
+const renderCreateRoutineButton = $("#create-new-routine");
 
 const handleLogin = async (event) => {
   event.preventDefault();
-
   const email = $("#email-input").val();
   const password = $("#password-input").val();
-
   if (!email) {
     alert("Please provide an email and password");
   } else if (!password) {
@@ -33,11 +32,8 @@ const handleLogin = async (event) => {
         password,
       }),
     });
-
     const data = await response.json();
-
-    // console.log(data);
-
+    console.log(data);
     if (data.success) {
       alert("Login Successful");
       window.location.replace("/dashboard");
@@ -55,37 +51,58 @@ const handleSignUp = async (event) => {
   const password = $("#password-input").val();
   const confirmPassword = $("#confirm-password-input").val();
   const age = $("#age-select :selected").text();
+  const location = $("#location-select :selected").text();
+
+  if (!firstName || !lastName) {
+    return alert("Please enter your full name");
+  }
+
+  if (!username) {
+    return alert("Please enter a username");
+  }
 
   if (password.length < 8) {
-    alert("Password must be 8 or more characters");
-  } else if (password.length > 20) {
-    alert("Password must be 20 characters or less");
-  } else if (password !== confirmPassword) {
-    alert("Passwords do not match");
-  } else {
-    const response = await fetch("/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        first_name: firstName,
-        last_name: lastName,
-        user_name: username,
-        email,
-        password,
-        age,
-      }),
-    });
+    return alert("Password must be 8 or more characters");
+  }
 
-    const data = await response.json();
+  if (password.length > 20) {
+    return alert("Password must be 20 characters or less");
+  }
 
-    // console.log(data);
+  if (password !== confirmPassword) {
+    return alert("Passwords do not match");
+  }
 
-    if (data.success) {
-      alert("Successfully created account");
-      window.location.replace("/login");
-    }
+  if (age === "Select an option") {
+    return alert("Please enter your age");
+  }
+
+  if (location === "Select a location") {
+    return alert("Please select a location");
+  }
+  const response = await fetch("/auth/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      first_name: firstName,
+      last_name: lastName,
+      user_name: username,
+      email,
+      password,
+      age,
+      location,
+    }),
+  });
+
+  const data = await response.json();
+
+  console.log(data);
+
+  if (data.success) {
+    alert("Login Successful");
+    window.location.replace("/dashboard");
   }
 };
 
@@ -145,7 +162,21 @@ const handleAddToRoutine = async (event) => {
     body: JSON.stringify(exercise),
   });
   const data = await response.json();
-  //   console.log(data);
+  console.log(data);
+};
+
+const goToRoutine = (event) => {
+  const target = $(event.target);
+
+  if (target.is("button" || "h5")) {
+    const routineId = target.data("id");
+
+    window.location.replace(`/routines/${routineId}`);
+  }
+};
+
+const renderCreateRoutine = (event) => {
+  window.location.replace("/create-routine");
 };
 
 signUpFormElement.on("submit", handleSignUp);
@@ -159,3 +190,6 @@ targetSearch.on("click", handleExTarget);
 addToRoutine.on("click", handleAddToRoutine);
 
 loginFormElement.on("submit", handleLogin);
+logoutNoBtn.on("click", handleNoLogout);
+renderCreateRoutineButton.on("click", renderCreateRoutine);
+$(`.btn-routine-title`).on("click", goToRoutine);
