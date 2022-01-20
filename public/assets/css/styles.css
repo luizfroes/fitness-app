@@ -10,13 +10,15 @@ body {
 
 /* Dashboard Styles */
 
-.dashboard-wrapper {
+.dashboard-wrapper,
+.routine-wrapper {
   display: flex;
   flex-direction: row;
   margin: 1rem;
 }
 
-.aside-container {
+.aside-container,
+.aside-routine-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -33,7 +35,8 @@ body {
   gap: 1rem;
 }
 
-.profile-name {
+.profile-name,
+.routine-name {
   text-align: center;
   padding: 1rem 3rem;
 }
@@ -42,7 +45,8 @@ body {
   padding-bottom: 1rem;
 }
 
-.user-details {
+.user-details,
+.routine-details {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -64,20 +68,20 @@ body {
 }
 
 .quote-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 60%;
-    padding: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .quote-card p {
-    margin: 20% 0;
-    font-style: italic;
-    height: 100%;
+  margin: 20% 0;
+  font-style: italic;
+  height: 100%;
 }
 
 .weather-card {
@@ -92,17 +96,17 @@ body {
 }
 
 .weather-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .weather-status {
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-    background-color: lightgreen;
-    height: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: lightgreen;
+  height: fit-content;
 }
 
 .weather-info {
@@ -118,16 +122,28 @@ body {
 }
 
 .dashboard-routine-card,
-.no-routine-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
-    width: 100%;
-    height: fit-content;
+.no-routine-card,
+.exercise-title-card {
+  display: flex;
+}
+
+.dashboard-routine-card,
+.no-routine-card,
+.exercise-title-card,
+.exercise-container {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
+  width: 100%;
+  height: fit-content;
+}
+
+.exercise-container {
+  min-height: 100%;
 }
 
 .routine-card {
@@ -166,15 +182,20 @@ body {
 }
 
 .routine-info {
-  display: flex;
   flex-direction: row;
+}
+
+.routine-info,
+.routine-container-info {
+  display: flex;
   justify-content: space-between;
-  height: 50%;
+  height: 100%;
   margin: 1rem 0;
   padding-right: 1rem;
 }
 
-.routine-info-card {
+.routine-info-card,
+.routine-info-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,7 +220,6 @@ body {
 }
 
 .target-info {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -258,6 +278,26 @@ body {
   padding-top: 1rem;
 }
 
+.routine-name {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.routine-info-container {
+  width: 8rem;
+  margin: 1rem;
+  height: 8rem;
+}
+
+.exercise-title-card {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.routine-container-info {
+  flex-direction: column;
+  align-items: center;
+}
 /* Form Styles - Login & Signup */
 
 .login-form,
@@ -334,10 +374,10 @@ body {
 }
 
 .select {
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-    border: unset;
-    width: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  border: unset;
+  width: fit-content;
 }
 
 .login-button,
@@ -364,6 +404,66 @@ body {
   border-right: unset;
 }
 
+/* Exercise cards */
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.routine-exercise-card-container {
+  margin: 1rem 1rem 3rem 1rem;
+  position: relative;
+  box-shadow: 0 40px 60px -6px black;
+}
+
+.card-title {
+  display: block;
+  text-align: center;
+  background-color: rgb(0, 157, 255);
+  padding: 2%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.routine-exercise-card-container img {
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.card-container {
+  display: block;
+  font-size: 1rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 0 1rem;
+  background-color: white;
+  overflow-y: scroll;
+  transition: 0.8s ease;
+  width: 100%;
+}
+
+.card-description {
+  padding: 1rem;
+  border-bottom: solid rgb(0, 157, 255) 2px;
+}
+
+.routine-exercise-card-container:hover .card-container {
+  opacity: 1;
+  height: 100%;
+}
+
+.delete-btn-container {
+  padding: 2rem 1rem;
+}
+
 @media all and (min-width: 1024px) {
   .routine-info {
     justify-content: space-around;
@@ -384,60 +484,80 @@ body {
 }
 
 @media all and (max-width: 768px) {
-    /* Dashboard Styles */
-    .dashboard-wrapper {
-        flex-direction: column;
-    }
-    .aside-container {
-        margin-bottom: 1rem;
-        margin-right: unset;
-    }
-    .quote-weather-content {
-        gap: 1rem;
-        padding: unset;
-        flex-direction: column;
-    }
-    .quote-card {
-        width: 100%;
-    }
-    .quote-card p {
-        margin: 10%;
-    }
-    .weather-card {
-        width: 100%;
-    }
-    .profile-card {
-        padding: 0 2rem;
-    }
-    .routine-card {
-        height: fit-content;
-    }
-    .routine-info {
-        justify-content: space-around;
-        flex-shrink: 1;
-        flex-wrap: wrap;
-        height: fit-content;
-        margin: 0 1rem;
-        margin-top: 1rem;
-        padding: unset;
-        gap: 1rem;
-    }
-    .routine-info-card {
-        width: 140px;
-    }
-    /* Form Styles */
-    .form {
-        padding: unset;
-    }
-    .signup-form,
-    .login-form {
-        width: 80%;
-    }
-    .signup-name-control {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+  /* Dashboard Styles */
+  .dashboard-wrapper,
+  .routine-wrapper {
+    flex-direction: column;
+  }
+  .aside-container {
+    margin-bottom: 1rem;
+    margin-right: unset;
+  }
+  .quote-weather-content {
+    gap: 1rem;
+    padding: unset;
+    flex-direction: column;
+  }
+  .quote-card {
+    width: 100%;
+  }
+  .quote-card p {
+    margin: 10%;
+  }
+  .weather-card {
+    width: 100%;
+  }
+  .profile-card,
+  .routine-container {
+    padding: 0 2rem;
+  }
+  .routine-card {
+    height: fit-content;
+  }
+  .routine-info {
+    justify-content: space-around;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    height: fit-content;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    padding: unset;
+    gap: 1rem;
+  }
+  .routine-info-card {
+    width: 140px;
+  }
+
+  .routine-container-info {
+    flex-direction: row;
+  }
+
+  .exercise-title-card {
+    margin: 1rem 0rem 0rem 0rem;
+    width: auto;
+  }
+
+  .aside-routine-container {
+    margin-right: 0rem;
+  }
+
+  .cards {
+    justify-content: center !important;
+  }
+
+  /* Form Styles */
+  .form {
+    padding: unset;
+  }
+  .signup-form,
+  .login-form {
+    width: 80%;
+  }
+  .signup-name-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 425px) {
@@ -525,4 +645,22 @@ body {
   .btn-routine-title {
     padding-bottom: 1rem;
   }
+
+  .routine-info-container {
+    width: 5rem;
+    height: 5rem;
+  }
+  .routine-container {
+    padding: 0;
+  }
+
+  .routine-details {
+    padding: 0;
+  }
+
+  .routine-name {
+    padding: 1rem 0rem 0rem 0rem;
+  }
 }
+
+/* Carousel test */
