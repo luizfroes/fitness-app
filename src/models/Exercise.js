@@ -14,12 +14,8 @@ Exercise.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
+    image: {
+      type: DataTypes.BLOB,
       allowNull: false,
     },
     target: {
@@ -32,7 +28,7 @@ Exercise.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: "exercises",
+    modelName: "exercise",
   }
 );
 
