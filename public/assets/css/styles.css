@@ -14,7 +14,7 @@ body {
 }
 
 .space-between {
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .space-around {
@@ -385,6 +385,7 @@ body {
 .create-form {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     gap: 1rem;
     padding: 2rem;
     width: 100%;
@@ -493,6 +494,12 @@ body {
 
 
 /* /Create-routine Styles */
+
+.create-form label {
+    width: 30%;
+}
+
+.routine-time {}
 
 .exercise-card {
     border-radius: 0.3rem;

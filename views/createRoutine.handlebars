@@ -4,29 +4,29 @@
     <section class="content-wrapper">
         <section class="create-routine-form">
             <form class="create-form">
-                <div class="flex-row space-between">
+                <div class="flex-row">
                     <label>Routine Name:</label>
-                    <input placeholder="Title" />
+                    <input type="text" placeholder="Title" />
                 </div>
-                <div class="flex-row space-between">
+                <div class="flex-row">
                     <label>Date:</label>
-                    <input placeholder="" />
+                    <input type="date" placeholder="" />
                 </div>
-                <section class="flex-row space-around">
+                <section class="routine-time flex-row space-around">
                     <div>
                         <label>Time Start:</label>
-                        <input placeholder="" />
+                        <input type="time" placeholder="" />
                     </div>
                     <div>
                         <label>Time End:</label>
-                        <input placeholder="" />
+                        <input type="time" placeholder="" />
                     </div>
                 </section>
                 <div class="add-exercise-title">
                     <h1>Add exercises</h1>
                 </div>
                 <section class="add-exercise-content">
-
+                    {{> addNewExercise}}
                 </section>
                 <section class="add-routine-button">
                     <button class="create-routine-button">Add Routine to Dashboard</button>
