@@ -1,4 +1,5 @@
 const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
+const { getExercisesByTarget, getRoutinesByUser } = require("../api");
 
 const renderLogin = (req, res) => {
   res.render("login");
@@ -64,7 +65,21 @@ const renderExercises = async (req, res) => {
 };
 
 const renderExercise = async (req, res) => {
-  res.send("renderExercise");
+  //   console.log(req.params.target);
+  const selected = await getExercisesByTarget(req.params.target);
+  //   console.log(selected);
+  //   console.log(req.session);
+  const routines = await getRoutinesByUser(req);
+  res.render("exercises", { selected, routines });
+};
+
+const renderExerciseByTarget = async (req, res) => {
+  //   console.log(req.params.target);
+  const selected = await getExercisesByTarget(req.params.target);
+  //   console.log(selected);
+  //   console.log(req.session);
+  const routines = await getRoutinesByUser(req);
+  res.render("exercises", { selected, routines });
 };
 
 module.exports = {
@@ -75,4 +90,5 @@ module.exports = {
   renderExercises,
   renderRoutine,
   renderRoutines,
+  renderExerciseByTarget,
 };
