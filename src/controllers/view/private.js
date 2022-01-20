@@ -30,6 +30,10 @@ const renderDashboard = async(req, res) => {
     });
 };
 
+const renderCreateRoutine = async(req, res) => {
+    res.render("createRoutine");
+};
+
 const renderRoutines = async(req, res) => {
     res.render("routines");
 };
@@ -57,4 +61,5 @@ module.exports = {
     renderExercises,
     renderExercise,
     renderDashboard,
+    renderCreateRoutine,
 };
