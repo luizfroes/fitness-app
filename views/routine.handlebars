@@ -5,5 +5,51 @@
   {{/if}}</header>
 
 <main>
-    <h1>Routine Page</h1>
-</main>
+      <section class="routine-wrapper">
+        <aside class="aside-routine-container">
+          <section class="routine-container">
+            <section class="routine-name">
+              <div>Routine Name</div>
+            </section>
+            <h5 class="routine-date-card text-center align-middle">
+              {{formatDate createdAt }}
+            </h5>
+            <section class="routine-details">
+              <div class="routine-container-info">
+                <div class="routine-info-container">
+                  <div class="routine-info-card-content">
+                    <h4 class="info-h4">
+                      {{routineLength time_start time_end}}
+                    </h4>
+                  </div>
+                  <div class="routine-info-card-title">
+                    <p>Minutes</p>
+                  </div>
+                </div>
+                <div class="routine-info-container">
+                  <div class="routine-info-card-content">
+                    <h4 class="info-h4">750kcal</h4>
+                  </div>
+                  <div class="routine-info-card-title">
+                    <p>Est. Calories</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <h6 class="author-h6 text-center">
+              {{user.first_name}} {{user.last_name}}
+            </h6>
+          </section>
+        </aside>
+        <section class="main-container">
+          <section class="exercise-title-card">Exercises</section>
+          <section class="exercise-container">
+            <div class="cards">
+              {{#each allExercises as |exercises|}}
+              {{> routineExerciseCard}}
+              {{/each}}
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
