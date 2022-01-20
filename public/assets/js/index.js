@@ -1,9 +1,8 @@
 const signUpFormElement = $("#signup-form");
 const loginFormElement = $("#login-form");
-
 const logoutYesBtn = $(`#yes-logout`);
-
 const logoutNoBtn = $(`#no-logout`);
+const renderCreateRoutineButton = $("#create-new-routine");
 
 const handleSignUp = async(event) => {
     event.preventDefault();
@@ -111,7 +110,12 @@ const handleNoLogout = () => {
     window.location.replace("/dashboard");
 };
 
+const renderCreateRoutine = (event) => {
+    window.location.replace("/create-routine");
+};
+
 signUpFormElement.on("submit", handleSignUp);
 loginFormElement.on("submit", handleLogin);
 logoutYesBtn.on("click", handleYesLogout);
 logoutNoBtn.on("click", handleNoLogout);
+renderCreateRoutineButton.on("click", renderCreateRoutine);
