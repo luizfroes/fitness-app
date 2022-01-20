@@ -18,6 +18,6 @@ router.get("/", renderHome);
 router.get("/routines", renderRoutines);
 router.get("/routines/:id", renderRoutine);
 router.get("/exercises", renderExercises);
-router.get("/exercises/:id", renderExercise);
+router.get("/exercises/:target", renderExercise);
 
 module.exports = router;

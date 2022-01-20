@@ -1,14 +1,20 @@
 const { Router } = require("express");
 
 const {
-    createNewRoutine,
-    updateRoutineById,
-    deleteRoutineById,
-    getAllRoutines,
-    getRoutineById,
+  createNewRoutine,
+  updateRoutineById,
+  deleteRoutineById,
+  getAllRoutines,
+  getRoutineById,
+  getExercisesByTarget,
+  createExercise,
 } = require("../../controllers/api");
 
 const router = Router();
+
+router.get("/exercise/:target", getExercisesByTarget);
+
+router.post("/exercise", createExercise);
 
 router.get("/routines", getAllRoutines);
 router.get("/routines/:id", getRoutineById);
