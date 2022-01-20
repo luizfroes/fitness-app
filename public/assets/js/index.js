@@ -101,8 +101,8 @@ const handleSignUp = async (event) => {
   console.log(data);
 
   if (data.success) {
-    alert("Login Successful");
-    window.location.replace("/dashboard");
+    alert("Signup Successful");
+    window.location.replace("/login");
   }
 };
 
