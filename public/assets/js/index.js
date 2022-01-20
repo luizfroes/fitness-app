@@ -1,4 +1,4 @@
-console.log("Hello, world!!");
+// console.log("Hello, world!!");
 
 const targetSearch = $("#exTargetBtn");
 
@@ -36,7 +36,7 @@ const handleLogin = async (event) => {
 
     const data = await response.json();
 
-    console.log(data);
+    // console.log(data);
 
     if (data.success) {
       alert("Login Successful");
@@ -80,7 +80,7 @@ const handleSignUp = async (event) => {
 
     const data = await response.json();
 
-    console.log(data);
+    // console.log(data);
 
     if (data.success) {
       alert("Successfully created account");
@@ -92,7 +92,7 @@ const handleSignUp = async (event) => {
 const handleExTarget = async (event) => {
   event.preventDefault();
   const target = $("#exTarget").val();
-  console.log(target);
+  //   console.log(target);
   const response = await fetch(`/exercises/${target}`, {
     method: "GET",
     headers: {
@@ -137,22 +137,6 @@ const handleAddToRoutine = async (event) => {
     routine_id: $("#routTarget").val(),
   };
 
-  //   console.log(exercise);
-  //   {target:'{{target}}', id:'{{id}}', exercise_name:'{{name}}', image:'{{gifUrl}}'})"
-
-  //   console.log(target);
-  //   console.log(exercise);
-  // const response = await fetch(`/api/routines/${target}`, {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     exercise,
-  //   }),
-  // });
-  //   const exerciseId = exercise.id;
-
   const response = await fetch(`/api/exercise`, {
     method: "POST",
     headers: {
@@ -161,7 +145,7 @@ const handleAddToRoutine = async (event) => {
     body: JSON.stringify(exercise),
   });
   const data = await response.json();
-  console.log(data);
+  //   console.log(data);
 };
 
 signUpFormElement.on("submit", handleSignUp);
