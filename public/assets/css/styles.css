@@ -36,9 +36,8 @@ body {
 }
 
 .profile-name,
-.routine-name {
+.routine-name-container {
   text-align: center;
-  padding: 1rem 3rem;
 }
 
 .profile-padding {
@@ -185,6 +184,10 @@ body {
   flex-direction: row;
 }
 
+.aside-routine-container {
+  min-height: 100%;
+}
+
 .routine-info,
 .routine-container-info {
   display: flex;
@@ -278,8 +281,14 @@ body {
   padding-top: 1rem;
 }
 
-.routine-name {
+.routine-name-container {
   font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem 0;
+}
+
+.routine-name {
+  width: 100%;
   font-weight: bolder;
 }
 
@@ -548,10 +557,6 @@ body {
     margin-right: 0rem;
   }
 
-  .routine-container {
-    height: 100%;
-  }
-
   .cards {
     justify-content: center !important;
   }
@@ -669,7 +674,7 @@ body {
     padding: 0;
   }
 
-  .routine-name {
+  .routine-name-container {
     padding: 1rem 0rem 0rem 0rem;
   }
 }
