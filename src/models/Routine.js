@@ -26,7 +26,7 @@ Routine.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "users",
+        model: "user",
         key: "id",
       },
     },
@@ -36,7 +36,7 @@ Routine.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: "routines",
+    modelName: "routine",
   }
 );
 

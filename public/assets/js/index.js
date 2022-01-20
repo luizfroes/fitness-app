@@ -126,28 +126,42 @@ const handleNoLogout = () => {
   window.location.replace("/dashboard");
 };
 
-const handleAddToRoutine = async (exercise) => {
-  const target = $("#routTarget").val();
+const handleAddToRoutine = async (event) => {
+  const target = $(event.target);
+
+  const exercise = {
+    target: target.attr("data-target"),
+    id: target.attr("data-id"),
+    image: target.attr("data-gifUrl"),
+    exercise_name: target.attr("data-exercise"),
+    routine_id: $("#routTarget").val(),
+  };
+
+  //   console.log(exercise);
+  //   {target:'{{target}}', id:'{{id}}', exercise_name:'{{name}}', image:'{{gifUrl}}'})"
+
   //   console.log(target);
   //   console.log(exercise);
-  const response = await fetch(`/api/routines/${target}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      exercise,
-    }),
-  });
-  const exCreate = await fetch(`/api/exercise/${target}`, {
+  // const response = await fetch(`/api/routines/${target}`, {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     exercise,
+  //   }),
+  // });
+  //   const exerciseId = exercise.id;
+
+  const response = await fetch(`/api/exercise`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      exercise,
-    }),
+    body: JSON.stringify(exercise),
   });
+  const data = await response.json();
+  console.log(data);
 };
 
 signUpFormElement.on("submit", handleSignUp);

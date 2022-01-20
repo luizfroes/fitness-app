@@ -4,9 +4,13 @@
     <h5 class="card-title">{{name}}</h5>
     <p class="card-text">{{target}} :: {{bodyPart}}</p>
     <button
-      onclick="handleAddToRoutine({target:'{{target}}', id:'{{id}}', exercise_name:'{{name}}', image:'{{gifUrl}}'})"
-      href="#"
+      data-target="{{target}}"
+      data-id="{{id}}"
+      data-exercise="{{name}}"
+      data-gifUrl="{{gifUrl}}"
       class="btn btn-primary"
     >Add to routine</button>
   </div>
 </div>
+
+{{!-- ({target:'{{target}}', id:'{{id}}', exercise_name:'{{name}}', image:'{{gifUrl}}'})" --}}

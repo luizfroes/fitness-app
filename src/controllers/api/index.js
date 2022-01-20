@@ -1,11 +1,17 @@
 const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
 const axios = require("axios").default;
+const { getPayloadWithValidFieldsOnly } = require("../../helpers");
 
 const createNewRoutine = async (req, res) => {
   res.send("createNewRoutine");
 };
 
 const updateRoutineById = async (req, res) => {
+  const routine = req.params.target;
+  const exerRoutine = await ExerciseRoutine.findAll({
+    where: { routine_id: routine },
+  });
+  console.log(exerRoutine);
   res.send("updateRoutineById");
 };
 
@@ -88,17 +94,26 @@ const getExercisesByTarget = async (req, res) => {
 const createExercise = async (req, res) => {
   try {
     const payload = getPayloadWithValidFieldsOnly(
-      ["exercise_name", "image", "target"],
+      ["exercise_name", "image", "target", "routine_id"],
       req.body
     );
 
-    if (Object.keys(payload).length !== 3) {
+    if (Object.keys(payload).length !== 4) {
       return res.status(400).json({ error: "Please provide a valid request" });
     }
 
-    const exercise = await Exercise.create(payload);
-    return res.json(exercise);
-  } catch (err) {
+    const exercise = await Exercise.create({
+      exercise_name: payload.exercise_name,
+      image: payload.image,
+      target: payload.target,
+    });
+
+    const exerciseRoutine = await ExerciseRoutine.create({
+      routine_id: payload.routine_id,
+      exercise_id: exercise.get("id"),
+    });
+    return res.json({ success: true });
+  } catch (error) {
     console.log(`[ERROR]: Failed to create exercise | ${error.message}`);
     return res.status(500).json({ error: "Failed to create exercise" });
   }

@@ -14,7 +14,7 @@ const router = Router();
 
 router.get("/exercise/:target", getExercisesByTarget);
 
-router.post("/exercise/:target", createExercise);
+router.post("/exercise", createExercise);
 
 router.get("/routines", getAllRoutines);
 router.get("/routines/:id", getRoutineById);
