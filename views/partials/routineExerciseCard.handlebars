@@ -8,14 +8,16 @@
     <p class="card-description text-center">
       {{description}}
     </p>
-    <p class="text-center card-description-title">Exercise Target</p>
+    <p class="text-center card-description-title">
+      Exercise Target
+    </p>
     <p class="card-description text-center">
       {{target}}
     </p>
     <div class="d-flex justify-content-center delete-btn-container">
-      <button type="button" class="btn btn-danger" data-id="{{exercise.id}}">
-        Remove Exercise
-      </button>
+      {{#if (checkUserId parent id)}}
+     {{>removeExerciseBtn}}
+     {{/if}}
     </div>
   </div>
 </div>

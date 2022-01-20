@@ -38,7 +38,7 @@ const renderRoutines = async (req, res) => {
 };
 
 const renderRoutine = async (req, res) => {
-  const { loggedIn } = req.session;
+  const { loggedIn, id } = req.session;
 
   const routineData = await Routine.findByPk(req.params.id, {
     include: [
@@ -56,7 +56,7 @@ const renderRoutine = async (req, res) => {
 
   const routine = routineData.get({ plain: true });
   console.log(routine);
-  res.render("routine", { loggedIn, routine });
+  res.render("routine", { loggedIn, routine, id });
 };
 
 const renderExercises = async (req, res) => {

@@ -16,4 +16,6 @@ module.exports = {
     console.log(time2);
     return moment(time2.diff(time1, "minutes"));
   },
+
+  checkUserId: (userId, userSessionId) => userId == userSessionId,
 };
