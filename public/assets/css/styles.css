@@ -24,13 +24,15 @@ body {
 
 /* Dashboard Styles */
 
-.dashboard-wrapper {
+.dashboard-wrapper,
+.routine-wrapper {
     display: flex;
     flex-direction: row;
     margin: 1rem;
 }
 
-.aside-container {
+.aside-container,
+.aside-routine-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -47,16 +49,17 @@ body {
     gap: 1rem;
 }
 
-.profile-name {
+.profile-name,
+.routine-name-container {
     text-align: center;
-    padding: 1rem 3rem;
 }
 
 .profile-padding {
     padding-bottom: 1rem;
 }
 
-.user-details {
+.user-details,
+.routine-details {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -155,16 +158,29 @@ body {
     background-color: rgb(57, 178, 253);
 }
 
-.no-routine-card {
+.dashboard-routine-card,
+.no-routine-card,
+.exercise-title-card {
     display: flex;
+}
+
+.dashboard-routine-card,
+.no-routine-card,
+.exercise-title-card,
+.exercise-container {
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 1rem;
     background-color: lightgray;
     border-radius: 0.3rem;
     box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
     width: 100%;
     height: fit-content;
+}
+
+.exercise-container {
+    min-height: 100%;
 }
 
 .routine-card {
@@ -175,7 +191,10 @@ body {
     border-radius: 0.3rem;
     box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
     width: 100%;
-    height: 17rem;
+}
+
+.dashboard-routine-card {
+    height: 10rem;
 }
 
 .routine-section {
@@ -185,32 +204,48 @@ body {
     width: 70%;
 }
 
-.routine-title {
-    display: flex;
+.dashboard-routine-title {
+    padding-bottom: 1rem;
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 1rem;
+}
+
+.dashboard-routine-title,
+.routine-title {
+    display: flex;
     align-items: center;
     border-bottom: 2px solid #acacac;
-    padding-right: 1rem;
 }
 
 .routine-info {
-    display: flex;
     flex-direction: row;
+}
+
+.aside-routine-container {
+    min-height: 100%;
+}
+
+.routine-info,
+.routine-container-info {
+    display: flex;
     justify-content: space-between;
-    height: 50%;
-    margin: auto 0;
+    height: 100%;
+    margin: 1rem 0;
     padding-right: 1rem;
 }
 
-.routine-info-card {
+.routine-info-card,
+.routine-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-shrink: 1;
-    padding: 2em 0;
     border-radius: 0.3rem;
     box-shadow: 5px 5px 15px rgb(169, 169, 169);
     color: white;
     background-color: rgb(0, 157, 255);
-    width: 31%;
     text-align: center;
 }
 
@@ -226,11 +261,19 @@ body {
 }
 
 .target-info {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .unset-margin {
     margin: unset;
+}
+
+.info-h4 {
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 
@@ -240,6 +283,88 @@ body {
 .signup-form {
     margin: 0 auto;
     width: 70%;
+}
+
+.title-h5,
+.targets-h5 {
+    font-size: 1.25rem !important;
+}
+
+
+/* Routines Styles */
+
+.routine-card {
+    height: 11rem;
+}
+
+.btn-routine-title {
+    flex-grow: 3;
+    padding-bottom: 1rem;
+    width: 100%;
+    background-color: lightgray;
+    border: none;
+    font-size: 1.3rem;
+    height: 2.5rem;
+}
+
+.routine-exercise-card {
+    width: 100%;
+}
+
+.targets-h5 {
+    padding-bottom: 1rem;
+}
+
+.btn-routine-title:hover {
+    font-weight: bolder;
+}
+
+.author-h6 {
+    flex-grow: 1;
+    width: 100%;
+    font-size: 1.3rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.routine-date-card {
+    padding-top: 1rem;
+}
+
+.routine-name-container {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+}
+
+.routine-name {
+    width: 100%;
+    font-weight: bolder;
+}
+
+.routine-info-container {
+    width: 8rem;
+    margin: 1rem;
+    height: 8rem;
+}
+
+.exercise-title-card {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.routine-container-info {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Form Styles - Login & Signup */
+
+.login-form,
+.signup-form {
+    margin: 0 auto;
+    width: 60%;
 }
 
 .create-routine-form {
@@ -373,6 +498,75 @@ body {
     border-right: unset;
 }
 
+
+/* Exercise cards */
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.routine-exercise-card-container {
+    margin: 1rem 1rem 3rem 1rem;
+    position: relative;
+    box-shadow: 0 40px 60px -6px black;
+}
+
+.card-title {
+    display: block;
+    text-align: center;
+    background-color: rgb(0, 157, 255);
+    padding: 2%;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    color: whitesmoke;
+}
+
+.routine-exercise-card-container img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+
+.card-container {
+    display: block;
+    font-size: 1rem;
+    position: absolute;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 0 1rem;
+    background-color: white;
+    overflow-y: scroll;
+    transition: 0.8s ease;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.card-description {
+    padding: 1rem;
+    border-bottom: solid rgb(0, 157, 255) 2px;
+}
+
+.card-description-title {
+    font-weight: bolder;
+    background-color: rgb(0, 157, 255) 2px;
+}
+
+.routine-exercise-card-container:hover .card-container {
+    opacity: 1;
+    height: 100%;
+}
+
+.delete-btn-container {
+    padding: 2rem 1rem;
+}
+
 @media all and (min-width: 1024px) {
     .routine-info {
         justify-content: space-around;
@@ -394,7 +588,8 @@ body {
 
 @media all and (max-width: 768px) {
     /* Dashboard Styles */
-    .dashboard-wrapper {
+    .dashboard-wrapper,
+    .routine-wrapper {
         flex-direction: column;
     }
     .aside-container {
@@ -415,7 +610,8 @@ body {
     .weather-card {
         width: 100%;
     }
-    .profile-card {
+    .profile-card,
+    .routine-container {
         padding: 0 2rem;
     }
     .routine-card {
@@ -433,6 +629,19 @@ body {
     }
     .routine-info-card {
         width: 140px;
+    }
+    .routine-container-info {
+        flex-direction: row;
+    }
+    .exercise-title-card {
+        margin: 1rem 0rem 0rem 0rem;
+        width: auto;
+    }
+    .aside-routine-container {
+        margin-right: 0rem;
+    }
+    .cards {
+        justify-content: center !important;
     }
     /* Form Styles */
     .form {
@@ -462,4 +671,79 @@ body {
     .signup-form {
         width: 100%;
     }
+    /* dashboard Styles */
+    .dashboard-routine-title {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+    .dashboard-routine-card,
+    .routine-card {
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 20rem;
+    }
+    .title-h5 {
+        padding-bottom: 1rem;
+    }
+    .routine-section {
+        border: none;
+        width: 100%;
+        height: 8em;
+    }
+    .target-section {
+        border: none;
+        width: 100%;
+    }
+    .target-title {
+        border-bottom: none;
+    }
+    .card-title,
+    .target-title {
+        border-top: 2px solid #acacac;
+    }
+    .card-title,
+    .target-title {
+        margin-top: 1rem;
+    }
+    .card-title {
+        padding-top: 1rem;
+    }
+    .targets-h5 {
+        padding-bottom: 0rem;
+        padding-top: 1rem;
+    }
+    .target-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .routine-info-card {
+        padding: 0.5rem;
+        width: 7rem;
+    }
+    .date-h6 {
+        text-align: center;
+    }
+    .btn-routine-title {
+        padding-bottom: 1rem;
+    }
+    .routine-info-container {
+        width: 5rem;
+        height: 5rem;
+    }
+    .routine-container {
+        padding: 0;
+    }
+    .routine-details {
+        padding: 0;
+    }
+    .routine-name-container {
+        padding: 1rem 0rem 0rem 0rem;
+    }
 }
+
+
+/* Carousel test */
