@@ -1,0 +1,21 @@
+<div class="routine-exercise-card-container">
+  <h2 class="card-title">{{exercise_name}}</h2>
+  <img src="https://via.placeholder.com/450x300" alt="" />
+  <div class="card-container">
+    <p class="text-center card-description-title">Exercise Type</p>
+    <p class="card-description text-center">{{type}}</p>
+    <p class="text-center card-description-title">Exercise Description</p>
+    <p class="card-description text-center">
+      {{description}}
+    </p>
+    <p class="text-center card-description-title">Exercise Target</p>
+    <p class="card-description text-center">
+      {{target}}
+    </p>
+    <div class="d-flex justify-content-center delete-btn-container">
+      <button type="button" class="btn btn-danger" data-id="{{exercise.id}}">
+        Remove Exercise
+      </button>
+    </div>
+  </div>
+</div>
