@@ -3,14 +3,14 @@
 <main>
     <section class="content-wrapper">
         <section class="create-routine-form">
-            <form class="create-form">
+            <form id="create-form" class="create-form">
                 <div class="flex-row">
-                    <label>Routine Name:</label>
-                    <input type="text" placeholder="Title" />
+                    <label for="routine-name">Routine Name:</label>
+                    <input id="routine-name" type="text" placeholder="Title" />
                 </div>
                 <div class="flex-row">
                     <label>Date:</label>
-                    <input type="date" placeholder="" />
+                    <input type="date" placeholder="" id="routine-date"  />
                 </div>
                 <section class="routine-time flex-row space-around">
                     <div class="flex-row">
@@ -22,25 +22,8 @@
                         <input type="time" placeholder="" />
                     </div>
                 </section>
-                <div class="add-exercise-title">
-                    <h1>Add exercises</h1>
-                </div>
-                <div class="search-exercises">
-                    <label for="">Exercise by Name:</label>
-                    <select>
-                        <option>Exercise 1</option>
-                        <option>Exercise 2</option>
-                    </select>
-                    <button class="search-exercises-button" style="float: right;">Add</button>
-                </div>
-                <section class="add-exercise-content">
-                    {{> addNewExercise}}
-                    {{> addNewExercise}}
-                    {{> addNewExercise}}
-                    {{> addNewExercise}}
-                </section>
                 <section class="add-routine-button">
-                    <button class="create-routine-button">Add Routine to Dashboard</button>
+                    <button id="create-routine-button" class="create-routine-button">Add Routine to Dashboard</button>
                 </section>
             </form>
         </section>
