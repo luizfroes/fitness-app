@@ -5,7 +5,7 @@ body {
 }
 
 .content-wrapper {
-    margin: 3rem;
+    margin: 2rem;
 }
 
 .flex-row {
@@ -46,8 +46,7 @@ body {
 .home-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin: 0 10rem;
+    margin: 0 4rem;
 }
 
 .phrase-container {
@@ -334,6 +333,7 @@ body {
 }
 
 .profile-info-card {
+    border-radius: 0.3rem;
     background-color: rgb(0, 157, 255);
     color: whitesmoke;
     margin: 0.5rem;
@@ -421,6 +421,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     padding: 0.5rem 0;
     border-bottom: 1px solid black;
 }
@@ -472,8 +473,7 @@ body {
     background-color: lightgray;
     border-radius: 0.3rem;
     box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
-    margin-right: 3rem;
-    height: 16rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
 
@@ -513,7 +513,7 @@ body {
 .routine-info,
 .routine-container-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     margin: 1rem 0;
     padding-right: 1rem;
@@ -531,6 +531,7 @@ body {
     color: white;
     background-color: rgb(0, 157, 255);
     text-align: center;
+    width: 25%;
 }
 
 .target-section {
@@ -821,6 +822,10 @@ body {
 }
 
 @media all and (max-width: 1090px) {
+    /* Home Page */
+    .home-container {
+        margin: 1rem;
+    }
     .exercise-card {
         width: 100%;
     }
@@ -864,12 +869,15 @@ body {
     }
 }
 
+@media all and (min-width: 1400px) {
+    .dashboard-routine-section {
+        margin: 0 10rem;
+    }
+}
+
 @media all and (min-width: 1024px) {
     .routine-info {
         justify-content: space-around;
-    }
-    .routine-info-card {
-        width: 25%;
     }
 }
 
@@ -884,21 +892,15 @@ body {
 }
 
 @media all and (max-width: 768px) {
+    /* Home Styles */
+    .login-signup-container {
+        padding: 0 1rem;
+    }
     .btn-container {
         padding-top: 4rem;
     }
-    .welcome-container {
-        padding-top: 5rem;
-    }
-    .welcome-p,
-    .welcome-p-2 {
-        padding-bottom: 2rem;
-    }
-    .welcome-p {
-        padding-left: 20rem;
-    }
-    .welcome-p-2 {
-        padding-left: 30rem;
+    .routine-title {
+        flex-direction: column;
     }
     /* Dashboard Styles */
     .dashboard-wrapper {
@@ -935,9 +937,7 @@ body {
         flex-shrink: 1;
         flex-wrap: wrap;
         height: fit-content;
-        margin: 0 1rem;
-        margin-top: 1rem;
-        padding: unset;
+        padding: 1rem;
         gap: 1rem;
     }
     .routine-info-card {
@@ -985,11 +985,23 @@ body {
 }
 
 @media all and (max-width: 425px) {
+    .content-wrapper {
+        margin: 1rem;
+    }
+    .exercise-hero {
+        margin-bottom: 2rem;
+    }
     .profile-card {
         padding: unset;
     }
     .profile-name {
         padding: 1rem 0;
+    }
+    .profile-info-card {
+        margin: 0.2rem;
+    }
+    .profile-info {
+        padding: 0.5rem;
     }
     .login-form {
         width: 100%;
@@ -1015,23 +1027,8 @@ body {
     .btn-container {
         padding-top: 3rem;
     }
-    .login-btn,
-    .signup-btn {
-        width: 75%;
-    }
-    .welcome-container {
-        padding-top: 5rem;
-    }
-    .welcome-p,
-    .welcome-p-2 {
-        padding-bottom: 2rem;
-        font-size: 1.2rem;
-    }
     .welcome-p {
-        padding-left: 2rem;
-    }
-    .welcome-p-2 {
-        padding-left: 10rem;
+        font-size: 1.2rem;
     }
     /* dashboard Styles */
     .dashboard-routine-title {
@@ -1044,15 +1041,18 @@ body {
         flex-direction: column;
         justify-content: space-between;
         flex-wrap: wrap;
-        height: 24rem;
+        height: 100%;
     }
     .title-h5 {
         padding-bottom: 1rem;
     }
+    .user-details {
+        padding: unset;
+    }
     .routine-section {
         border: none;
         width: 100%;
-        height: 8em;
+        height: 100%;
     }
     .target-section {
         border: none;
@@ -1063,11 +1063,13 @@ body {
     }
     .card-title,
     .target-title {
+        padding: 1rem;
         border-top: 2px solid #acacac;
+        border-bottom: 2px solid #acacac;
     }
     .card-title,
     .target-title {
-        margin-top: 1rem;
+        margin: 1rem 0;
     }
     .card-title {
         padding-top: 1rem;
@@ -1078,7 +1080,6 @@ body {
     }
     .target-info {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
     }

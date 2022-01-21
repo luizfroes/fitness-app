@@ -14,13 +14,15 @@
                     <h4>Add New Routine:</h4>
                     <button id="create-new-routine" class="create-new-button">+</button>
             </section>
-            {{#if allRoutines}}
+            <section class="dashboard-routine-section">
+                {{#if allRoutines}}
             {{#each allRoutines}}
             {{> dashboardRoutineCard}}
             {{/each}}
             {{else}}
             <section class="no-routine-card">You currently have no stored routines</section>
             {{/if}}
+            </section>
         </section>
     </section>
 </main>
