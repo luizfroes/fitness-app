@@ -4,7 +4,7 @@
   "description": "A fitness app",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "npm run seed && node src/server.js",
     "dev": "nodemon src/server.js",
     "seed": "node src/seeds/index.js"
   },
