@@ -649,7 +649,21 @@ body {
     flex-wrap: wrap;
     flex-shrink: 1;
     justify-content: space-evenly;
-    width: 70%;
+    width: 100%;
+}
+
+.no-exercise-card {
+    text-align: center;
+    border-radius: 0.3rem;
+    background-color: lightgray;
+    padding: 2rem 1rem;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+    width: 100%;
+}
+
+.no-exercise-card h3 {
+    margin-top: 2rem !important;
 }
 
 .exercise-card {
@@ -820,6 +834,9 @@ body {
     }
     .exercise-wrapper {
         flex-direction: column;
+    }
+    .no-exercise-card h3 {
+        margin-top: unset !important;
     }
     .exercise-card {
         width: 45%;

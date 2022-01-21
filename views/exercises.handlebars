@@ -7,7 +7,7 @@
 
 <main>
   <section class="exercise-hero">
-    <h1>Exercises</h1>
+    <h1>Search for an Exercise</h1>
   </section>
 
 
@@ -53,9 +53,17 @@
     </aside>
 
     <section class="main-exercise-container" id="addToRoutineBtns">
+      {{#if selected}}
       {{#each selected}}
       {{> exerciseCards}}
       {{/each}}
+      {{else}}
+      <section class="main-exercise-container">
+        <div class="no-exercise-card">
+          <h3>Please choose a target...</h3>
+        </div>
+        </section>
+      {{/if}}
     </section>
   
   </section>
