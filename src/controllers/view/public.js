@@ -66,9 +66,10 @@ const renderExercises = async(req, res) => {
 };
 
 const renderExercise = async(req, res) => {
+    const { loggedIn } = req.session;
     const selected = await getExercisesByTarget(req.params.target);
     const routines = await getRoutinesByUser(req);
-    res.render("exercises", { selected, routines });
+    res.render("exercises", { selected, routines, loggedIn });
 };
 module.exports = {
     renderHome,
