@@ -145,6 +145,16 @@ const handleCreateRoutine = async(event) => {
     const routineStart = $("#routine-start").val();
     const routineEnd = $("#routine-end").val();
 
+    if (!routineName) {
+        alert("Please enter a routine name.");
+    } else if (!routineDate) {
+        alert("Please enter a date");
+    } else if (!routineStart) {
+        alert("Please enter a start time");
+    } else if (!routineEnd) {
+        alert("Please enter a end time");
+    }
+
     const response = await fetch("/api/routines", {
         method: "POST",
         headers: {
