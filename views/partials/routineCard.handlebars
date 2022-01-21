@@ -45,9 +45,9 @@
 			<h5 class="targets-h5">Targets</h5>
 		</div>
 		<div class="target-info">
-			<div>Arms</div>
-			<div>Legs</div>
-			<div>Chest</div>
+			{{#each exercises}}
+				<div>{{this.target}}</div>
+			{{/each}}
 		</div>
 	</div>
 </section>
