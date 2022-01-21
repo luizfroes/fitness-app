@@ -207,6 +207,11 @@ const handleAddToRoutine = async(event) => {
         body: JSON.stringify(exercise),
     });
     const data = await response.json();
+
+    if (data.status == 401) {
+        alert("Please log in to add exercise");
+    }
+
     console.log(data);
 };
 

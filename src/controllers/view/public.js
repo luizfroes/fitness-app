@@ -62,14 +62,29 @@ const renderRoutine = async(req, res) => {
 
 const renderExercises = async(req, res) => {
     const { loggedIn } = req.session;
-    res.render("exercises", { loggedIn });
+
+    if (!loggedIn) {
+        return res.render("exercises");
+    } else {
+        return res.render("exercises", { loggedIn });
+    }
 };
 
 const renderExercise = async(req, res) => {
     const { loggedIn } = req.session;
-    const selected = await getExercisesByTarget(req.params.target);
-    const routines = await getRoutinesByUser(req);
-    res.render("exercises", { selected, routines, loggedIn });
+
+    if (!loggedIn) {
+        const selected = await getExercisesByTarget(req.params.target);
+        return res.render("exercises", { selected });
+    } else {
+        const selected = await getExercisesByTarget(req.params.target);
+        const routines = await getRoutinesByUser(req);
+        return res.render("exercises", {
+            selected,
+            routines,
+            loggedIn,
+        });
+    }
 };
 module.exports = {
     renderHome,
