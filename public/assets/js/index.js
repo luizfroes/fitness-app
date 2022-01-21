@@ -1,5 +1,5 @@
 const targetSearch = $("#exTargetBtn");
-const addToRoutine = $("#addToRoutineBtn");
+const addToRoutine = $("#addToRoutineBtns");
 const signUpFormElement = $("#signup-form");
 const logoutYesBtn = $(`#yes-logout`);
 const loginFormElement = $("#login-form");
