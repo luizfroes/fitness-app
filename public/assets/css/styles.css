@@ -1,1116 +1,1109 @@
 /* Basic Styles */
 
 body {
-    background-color: rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
 }
 
 .content-wrapper {
-    margin: 2rem;
+  margin: 2rem;
 }
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .space-between {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .space-around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .dashboard-wrapper,
 .routine-wrapper,
 .exercise-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
 }
-
 
 /* Navigation Bar Styles */
 
 .nav-border-top {
-    border-top: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .nav-border-right {
-    border-right: unset;
+  border-right: unset;
 }
-
 
 /* Home Styles */
 
 .home-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4rem;
 }
 
 .phrase-container {
-    opacity: 0.5;
-    padding: 0rem 1rem 1rem 1rem;
+  opacity: 0.5;
+  padding: 0rem 1rem 1rem 1rem;
 }
 
 .phrase-h1 {
-    font-size: 5rem;
-    padding-left: 2rem;
+  font-size: 5rem;
+  padding-left: 2rem;
 }
 
 .phrase-h3 {
-    font-size: 2.5rem;
-    padding-left: 8rem;
+  font-size: 2.5rem;
+  padding-left: 8rem;
 }
 
 .carousel-caption {
-    right: 0%;
-    padding-top: 0px;
-    padding-left: 0rem;
-    bottom: 30%;
+  right: 0%;
+  padding-top: 0px;
+  padding-left: 0rem;
+  bottom: 30%;
 }
 
 .carousel-img {
-    object-fit: cover;
-    width: 100%;
-    height: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
 }
 
 .img-caption {
-    font-family: "Bebas Neue";
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: wheat;
-    width: 80%;
+  font-family: "Bebas Neue";
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: wheat;
+  width: 80%;
 }
 
 .author-caption {
-    font-family: "Bebas Neue";
-    font-size: 0.8rem;
+  font-family: "Bebas Neue";
+  font-size: 0.8rem;
 }
 
 .welcome-container {
-    padding: 2rem 0;
-    margin: 0 2rem;
+  padding: 2rem 0;
+  margin: 0 2rem;
 }
 
 .welcome-p,
 .welcome-p-2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    opacity: 0.5;
-    padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.5;
+  padding-bottom: 0.5rem;
 }
 
 .welcome-p {
-    padding-left: unset;
+  padding-left: unset;
 }
 
 .welcome-p-2 {
-    padding-left: unset;
+  padding-left: unset;
 }
-
 
 /* homepage buttons styles */
 
 .home-btn-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .login-btn,
 .signup-btn {
-    align-items: center;
-    background-color: initial;
-    background-image: linear-gradient(#464d55, #25292e);
-    border-radius: 8px;
-    border-width: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    flex-direction: column;
-    font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 18px;
-    height: 52px;
-    justify-content: center;
-    line-height: 1;
-    outline: none;
-    overflow: hidden;
-    padding: 0 32px;
-    text-align: center;
-    text-decoration: none;
-    transform: translate3d(0, 0, 0);
-    transition: all 150ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    width: 100%;
-    font-weight: bolder;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  width: 100%;
+  font-weight: bolder;
 }
 
 .login-btn:hover {
-    box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
-    opacity: 0.85;
+  box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
+  opacity: 0.85;
 }
 
 .signup-btn:hover {
-    box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
-    opacity: 0.85;
+  box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
+  opacity: 0.85;
 }
 
 .login-btn:active {
-    outline: 0;
+  outline: 0;
 }
 
 .signup-btn:active {
-    outline: 0;
+  outline: 0;
 }
 
 .login-btn:focus {
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
 }
 
 .signup-btn:focus {
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
 }
 
 .login-signup-container {
-    margin: 2rem 0;
-    padding: 0 5rem;
-    width: 100%;
+  margin: 2rem 0;
+  padding: 0 5rem;
+  width: 100%;
 }
-
 
 /* Form Styles - Login & Signup */
 
 .login-form,
 .signup-form {
-    margin: 0 auto;
-    width: 60%;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .title-h5,
 .targets-h5 {
-    font-size: 1.25rem !important;
+  font-size: 1.25rem !important;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 3rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 3rem;
+  width: 100%;
 }
 
 .signup-form input,
 .login-form input {
-    border: 1px solid #ced4da;
-    padding: 0.5rem;
-    width: 100%;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .login-header,
 .signup-header,
 .copyright {
-    text-align: center;
+  text-align: center;
 }
 
 .login-control,
 .signup-password-control {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .signup-name-control {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .first-name-input {
-    border-top-left-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem;
-    border: unset;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border: unset;
 }
 
 .last-name-input {
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-    border: unset;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border: unset;
 }
 
 .signup-username-control input[type="text"],
 .signup-email-control input[type="email"] {
-    border-radius: 0.3rem;
-    border: unset;
+  border-radius: 0.3rem;
+  border: unset;
 }
 
 .login-control input[type="email"],
 .password-input {
-    border-top-right-radius: 0.3rem;
-    border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
 }
 
 .login-control input[type="password"],
 .confirm-password-input {
-    border-bottom-left-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 
 .signup-age-control {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .select {
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-    border: unset;
-    width: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  border: unset;
+  width: fit-content;
 }
 
 .login-button,
 .signup-button,
 .create-routine-button,
 .search-exercises-button {
-    cursor: pointer;
-    padding: 0 1rem;
-    height: 2.5rem;
-    border-radius: 0.3rem;
-    border: unset;
+  cursor: pointer;
+  padding: 0 1rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  border: unset;
 }
 
 .login-button:hover,
 .signup-button:hover,
 .create-routine-button:hover,
 .search-exercises-button:hover {
-    transition: all 0.5s ease-out;
-    background-color: rgb(0, 211, 211);
+  transition: all 0.5s ease-out;
+  background-color: rgb(0, 211, 211);
 }
-
 
 /* logout buttons styles */
 
 .yes-logout-btn,
 .no-logout-btn {
-    width: 8rem;
+  width: 8rem;
 }
-
 
 /* Dashboard Styles */
 
 .aside-container,
 .aside-routine-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-right: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
 }
 
 .profile-name,
 .routine-name-container {
-    text-align: center;
+  text-align: center;
 }
 
 .profile-padding {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .profile-info {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .profile-info-card {
-    border-radius: 0.3rem;
-    background-color: rgb(0, 157, 255);
-    color: whitesmoke;
-    margin: 0.5rem;
-    width: 6rem;
+  border-radius: 0.3rem;
+  background-color: rgb(0, 157, 255);
+  color: whitesmoke;
+  margin: 0.5rem;
+  width: 6rem;
 }
 
 .user-details,
 .routine-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 1rem;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem;
+  text-align: center;
 }
 
 .user-goals {
-    gap: 1rem;
-    padding: 1rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .quote-weather-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
 }
 
 .quote-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 60%;
-    padding: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .quote-card p {
-    margin: 20% 0;
-    font-style: italic;
-    height: 100%;
+  margin: 20% 0;
+  font-style: italic;
+  height: 100%;
 }
 
 .weather-card {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
-    width: 40%;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  width: 40%;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .weather-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .weather-status {
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-    background-color: lightgreen;
-    height: fit-content;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: lightgreen;
+  height: fit-content;
 }
 
 .weather-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .weather-condition {
-    text-align: center;
-    padding: 0.3rem;
-    border-radius: 0.3rem;
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
 }
 
 .create-routine {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid black;
 }
 
 .create-new-button {
-    font-size: x-large;
-    background-color: rgb(0, 157, 255);
-    color: white;
-    border-radius: 0.3rem;
-    padding: 0 0.5rem;
-    border: unset;
-    text-align: center;
+  font-size: x-large;
+  background-color: rgb(0, 157, 255);
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  border: unset;
+  text-align: center;
 }
 
 .create-new-button:hover {
-    color: black;
-    background-color: rgb(57, 178, 253);
+  color: black;
+  background-color: rgb(57, 178, 253);
 }
 
 .dashboard-routine-card,
 .no-routine-card,
 .exercise-title-card {
-    display: flex;
+  display: flex;
 }
 
 .dashboard-routine-card,
 .no-routine-card,
 .exercise-title-card,
 .exercise-container {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
-    width: 100%;
-    height: fit-content;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
+  width: 100%;
+  height: fit-content;
 }
 
 .exercise-container {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 .routine-card {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
-    margin-bottom: 2rem;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 7px 7px 10px 2px rgb(201, 201, 201);
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .dashboard-routine-card {
-    height: 10rem;
+  height: 10rem;
 }
 
 .routine-section {
-    display: flex;
-    flex-direction: column;
-    border-right: 2px solid #acacac;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #acacac;
+  width: 70%;
 }
 
 .dashboard-routine-title {
-    padding-bottom: 1rem;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 1rem;
 }
 
 .dashboard-routine-title,
 .routine-title {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid #acacac;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #acacac;
 }
 
 .routine-info {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .aside-routine-container {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 .routine-info,
 .routine-container-info {
-    display: flex;
-    justify-content: space-around;
-    height: 100%;
-    margin: 1rem 0;
-    padding-right: 1rem;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  margin: 1rem 0;
+  padding-right: 1rem;
 }
 
 .routine-info-card,
 .routine-info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 1;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(169, 169, 169);
-    color: white;
-    background-color: rgb(0, 157, 255);
-    text-align: center;
-    width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(169, 169, 169);
+  color: white;
+  background-color: rgb(0, 157, 255);
+  text-align: center;
+  width: 25%;
 }
 
 .target-section {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
 .target-title {
-    text-align: center;
-    border-bottom: 2px solid #acacac;
+  text-align: center;
+  border-bottom: 2px solid #acacac;
 }
 
 .target-info {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .unset-margin {
-    margin: unset;
+  margin: unset;
 }
 
 .info-h4 {
-    font-size: 1.5rem;
-    font-weight: bolder;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
-
 
 /* Routines Styles */
 
 .btn-routine-title {
-    flex-grow: 3;
-    padding-bottom: 1rem;
-    width: 100%;
-    background-color: lightgray;
-    border: none;
-    font-size: 1.3rem;
-    height: 2.5rem;
+  flex-grow: 3;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: lightgray;
+  border: none;
+  font-size: 1.3rem;
+  height: 2.5rem;
 }
 
 .routine-exercise-card {
-    width: 100%;
+  width: 100%;
 }
 
 .targets-h5 {
-    padding-bottom: 1.05rem;
+  padding-bottom: 1.05rem;
 }
 
 .btn-routine-title:hover {
-    font-weight: bolder;
-    cursor: pointer;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .author-h6 {
-    flex-grow: 1;
-    width: 100%;
-    font-size: 1.3rem;
-    margin: 0;
-    padding-bottom: 1rem;
+  flex-grow: 1;
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 .routine-date-card {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
 .routine-name-container {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1rem 0;
 }
 
 .routine-name {
-    width: 100%;
-    font-weight: bolder;
+  width: 100%;
+  font-weight: bolder;
 }
 
 .routine-info-container {
-    width: 8rem;
-    margin: 1rem;
-    height: 8rem;
+  width: 8rem;
+  margin: 1rem;
+  height: 8rem;
 }
 
 .exercise-title-card {
-    font-size: 1.5rem;
-    font-weight: bolder;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 .routine-container-info {
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 /* Exercise Page Styles */
 
 .exercise-hero {
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    background-color: lightgray;
-    box-shadow: 5px 5px 20px rgb(177, 177, 177);
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: lightgray;
+  box-shadow: 5px 5px 20px rgb(177, 177, 177);
 }
 
 .exercise-aside-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-right: 1rem;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
-    padding: 1rem;
-    width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  padding: 1rem;
+  width: 30%;
 }
 
 .search-exercise {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-exercise-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .no-exercise-card {
-    text-align: center;
-    border-radius: 0.3rem;
-    background-color: lightgray;
-    padding: 2rem 1rem;
-    align-items: center;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
-    width: 100%;
+  text-align: center;
+  border-radius: 0.3rem;
+  background-color: lightgray;
+  padding: 2rem 1rem;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  width: 100%;
 }
 
 .no-exercise-card h3 {
-    margin-top: 2rem !important;
+  margin-top: 2rem !important;
 }
 
 .exercise-card {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 1;
-    justify-content: space-evenly;
-    border-radius: 0.3rem;
-    background-color: lightgray;
-    margin: 1rem;
-    padding: 2rem 1rem;
-    align-items: center;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
-    width: 45%;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  justify-content: space-evenly;
+  border-radius: 0.3rem;
+  background-color: lightgray;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  width: 45%;
 }
 
 .exercise-card-img {
-    width: 10rem;
-    height: 10rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 .exercise-card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40%;
-    height: 100%;
-    margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 100%;
+  margin-left: 1rem;
 }
 
 .card-title {
-    display: block;
-    text-align: center;
-    padding: 2%;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+  display: block;
+  text-align: center;
+  padding: 2%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
-
 
 /* /Create-routine Styles */
 
 .create-form {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: 100%;
 }
 
 .create-form label {
-    width: 30%;
+  width: 30%;
 }
 
 .create-routine-form {
-    margin: 0 auto;
-    width: 90%;
-    background-color: lightgray;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  margin: 0 auto;
+  width: 90%;
+  background-color: lightgray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .create-routine-form input {
-    border: 1px solid #ced4da;
-    padding: 0.5rem;
-    width: 70%;
-    border-radius: 0.3rem;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  width: 70%;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .add-exercise-title {
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 1px solid;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid;
 }
 
 .add-exercise-content {
-    border-radius: 0.3rem;
-    background-color: rgb(242, 242, 242);
-    height: 100%;
-    box-shadow: 5px 5px 15px rgb(177, 177, 177);
+  border-radius: 0.3rem;
+  background-color: rgb(242, 242, 242);
+  height: 100%;
+  box-shadow: 5px 5px 15px rgb(177, 177, 177);
 }
 
 .add-routine-button {
-    text-align: center;
+  text-align: center;
 }
-
 
 /* Exercise cards */
 
 .cards {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .routine-exercise-card-container {
-    margin: 1rem 1rem 3rem 1rem;
-    position: relative;
-    box-shadow: 0 40px 60px -6px black;
+  margin: 1rem 1rem 3rem 1rem;
+  position: relative;
+  box-shadow: 0 40px 60px -6px black;
+  width: 18rem;
 }
 
 .routine-exercise-card-container img {
-    width: 100%;
-    height: 98%;
-    object-fit: cover;
-    display: block;
-    position: relative;
+  width: 100%;
+  /* height: 98%; */
+  object-fit: contain;
+  display: block;
+  position: relative;
 }
 
 .card-container {
-    display: block;
-    font-size: 1rem;
-    position: absolute;
-    height: 0;
-    top: 0;
-    opacity: 0;
-    padding: 0 1rem;
-    background-color: white;
-    overflow-y: scroll;
-    transition: 0.8s ease;
-    width: 100%;
-    padding-top: 1rem;
+  display: block;
+  font-size: 1rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 0 1rem;
+  background-color: white;
+  overflow-y: scroll;
+  transition: 0.8s ease;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .card-description {
-    padding: 1rem;
-    border-bottom: solid rgb(0, 157, 255) 2px;
+  padding: 1rem;
+  border-bottom: solid rgb(0, 157, 255) 2px;
 }
 
 .card-description-title {
-    font-weight: bolder;
-    background-color: rgb(0, 157, 255) 2px;
+  font-weight: bolder;
+  background-color: rgb(0, 157, 255) 2px;
 }
 
 .routine-exercise-card-container:hover .card-container {
-    opacity: 1;
-    height: 100%;
+  opacity: 1;
+  height: 100%;
 }
 
 .delete-btn-container {
-    padding: 2rem 1rem;
+  padding: 2rem 1rem;
 }
 
 @media all and (max-width: 1090px) {
-    /* Home Page */
-    .home-container {
-        margin: 1rem;
-    }
-    .exercise-card {
-        width: 100%;
-    }
-    .exercise-card-img {
-        width: 12rem;
-        height: 12rem;
-    }
+  /* Home Page */
+  .home-container {
+    margin: 1rem;
+  }
+  .exercise-card {
+    width: 100%;
+  }
+  .exercise-card-img {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 
 @media all and (max-width: 1024px) {
-    /* Exercise Page Styles */
-    .main-exercise-container {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 0.5rem;
-    }
-    .exercise-aside-container {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-    .exercise-wrapper {
-        flex-direction: column;
-    }
-    .no-exercise-card h3 {
-        margin-top: unset !important;
-    }
-    .exercise-card {
-        width: 45%;
-        margin: unset;
-        margin-bottom: 1rem;
-        padding: 1rem 0;
-        gap: 1rem;
-    }
-    .exercise-card-img {
-        width: 9rem;
-        height: 9rem;
-    }
-    .card-text {
-        margin-bottom: 1rem;
-    }
+  /* Exercise Page Styles */
+  .main-exercise-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .exercise-aside-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .exercise-wrapper {
+    flex-direction: column;
+  }
+  .no-exercise-card h3 {
+    margin-top: unset !important;
+  }
+  .exercise-card {
+    width: 45%;
+    margin: unset;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .exercise-card-img {
+    width: 9rem;
+    height: 9rem;
+  }
+  .card-text {
+    margin-bottom: 1rem;
+  }
 }
 
 @media all and (min-width: 1400px) {
-    .dashboard-routine-section {
-        margin: 0 10rem;
-    }
+  .dashboard-routine-section {
+    margin: 0 10rem;
+  }
 }
 
 @media all and (min-width: 1024px) {
-    .routine-info {
-        justify-content: space-around;
-    }
+  .routine-info {
+    justify-content: space-around;
+  }
 }
 
 @media all and (min-width: 992px) {
-    .nav-border-top {
-        border-top: unset;
-    }
-    .nav-border-right {
-        padding-right: 1rem;
-        border-right: 1px solid black;
-    }
+  .nav-border-top {
+    border-top: unset;
+  }
+  .nav-border-right {
+    padding-right: 1rem;
+    border-right: 1px solid black;
+  }
 }
 
 @media all and (max-width: 768px) {
-    /* Home Styles */
-    .login-signup-container {
-        padding: 0 1rem;
-    }
-    .btn-container {
-        padding-top: 4rem;
-    }
-    .routine-title {
-        flex-direction: column;
-    }
-    /* Dashboard Styles */
-    .dashboard-wrapper {
-        flex-direction: column;
-    }
-    .aside-container {
-        width: 100%;
-        margin-bottom: 1rem;
-        margin-right: unset;
-    }
-    .quote-weather-content {
-        gap: 1rem;
-        padding: unset;
-        flex-direction: column;
-    }
-    .quote-card {
-        width: 100%;
-    }
-    .quote-card p {
-        margin: 10%;
-    }
-    .weather-card {
-        width: 100%;
-    }
-    .profile-card,
-    .routine-container {
-        padding: 0 2rem;
-    }
-    .routine-card {
-        height: fit-content;
-    }
-    .routine-info {
-        justify-content: space-around;
-        flex-shrink: 1;
-        flex-wrap: wrap;
-        height: fit-content;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    .routine-info-card {
-        width: 140px;
-    }
-    .routine-container-info {
-        flex-direction: row;
-    }
-    .exercise-title-card {
-        margin: 1rem 0rem 0rem 0rem;
-        width: auto;
-    }
-    .aside-routine-container {
-        margin-right: 0rem;
-    }
-    .cards {
-        justify-content: center !important;
-    }
-    /* Form Styles */
-    .form {
-        padding: unset;
-    }
-    .signup-form,
-    .login-form {
-        width: 80%;
-    }
-    .signup-name-control {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .exercise-card-img {
-        width: 7rem;
-        height: 7rem;
-    }
-    .exercise-card {
-        flex-direction: column;
-    }
-    .exercise-card-body {
-        text-align: center;
-        padding: 1rem;
-        margin: unset;
-        width: 100%;
-    }
+  /* Home Styles */
+  .login-signup-container {
+    padding: 0 1rem;
+  }
+  .btn-container {
+    padding-top: 4rem;
+  }
+  .routine-title {
+    flex-direction: column;
+  }
+  /* Dashboard Styles */
+  .dashboard-wrapper {
+    flex-direction: column;
+  }
+  .aside-container {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-right: unset;
+  }
+  .quote-weather-content {
+    gap: 1rem;
+    padding: unset;
+    flex-direction: column;
+  }
+  .quote-card {
+    width: 100%;
+  }
+  .quote-card p {
+    margin: 10%;
+  }
+  .weather-card {
+    width: 100%;
+  }
+  .profile-card,
+  .routine-container {
+    padding: 0 2rem;
+  }
+  .routine-card {
+    height: fit-content;
+  }
+  .routine-info {
+    justify-content: space-around;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .routine-info-card {
+    width: 140px;
+  }
+  .routine-container-info {
+    flex-direction: row;
+  }
+  .exercise-title-card {
+    margin: 1rem 0rem 0rem 0rem;
+    width: auto;
+  }
+  .aside-routine-container {
+    margin-right: 0rem;
+  }
+  .cards {
+    justify-content: center !important;
+  }
+  /* Form Styles */
+  .form {
+    padding: unset;
+  }
+  .signup-form,
+  .login-form {
+    width: 80%;
+  }
+  .signup-name-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .exercise-card-img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .exercise-card {
+    flex-direction: column;
+  }
+  .exercise-card-body {
+    text-align: center;
+    padding: 1rem;
+    margin: unset;
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 425px) {
-    .content-wrapper {
-        margin: 1rem;
-    }
-    .exercise-hero {
-        margin-bottom: 2rem;
-    }
-    .profile-card {
-        padding: unset;
-    }
-    .profile-name {
-        padding: 1rem 0;
-    }
-    .profile-info-card {
-        margin: 0.2rem;
-    }
-    .profile-info {
-        padding: 0.5rem;
-    }
-    .login-form {
-        width: 100%;
-    }
-    .signup-form {
-        width: 100%;
-    }
-    .img-caption {
-        font-size: 1rem;
-    }
-    .author-caption {
-        font-size: 0.5rem;
-    }
-    .phrase-h1 {
-        font-size: 3rem;
-        padding-left: 1rem;
-        font-size: 1.5rem;
-    }
-    .phrase-h3 {
-        font-size: 1.5rem;
-        padding-left: 4rem;
-    }
-    .btn-container {
-        padding-top: 3rem;
-    }
-    .welcome-p {
-        font-size: 1.2rem;
-    }
-    /* dashboard Styles */
-    .dashboard-routine-title {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-    }
-    .dashboard-routine-card,
-    .routine-card {
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        height: 100%;
-    }
-    .title-h5 {
-        padding-bottom: 1rem;
-    }
-    .user-details {
-        padding: unset;
-    }
-    .routine-section {
-        border: none;
-        width: 100%;
-        height: 100%;
-    }
-    .target-section {
-        border: none;
-        width: 100%;
-    }
-    .target-title {
-        border-bottom: none;
-    }
-    .card-title,
-    .target-title {
-        padding: 1rem;
-        border-top: 2px solid #acacac;
-        border-bottom: 2px solid #acacac;
-    }
-    .card-title,
-    .target-title {
-        margin: 1rem 0;
-    }
-    .card-title {
-        padding-top: 1rem;
-    }
-    .targets-h5 {
-        padding-bottom: 0rem;
-        padding-top: 1rem;
-    }
-    .target-info {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .routine-info-card {
-        padding: 0.5rem;
-        width: 7rem;
-    }
-    .date-h6 {
-        text-align: center;
-    }
-    .btn-routine-title {
-        padding-bottom: 1rem;
-    }
-    .routine-info-container {
-        width: 5rem;
-        height: 5rem;
-    }
-    .routine-container {
-        padding: 0;
-    }
-    .routine-details {
-        padding: 0;
-    }
-    .routine-name-container {
-        padding: 1rem 0rem 0rem 0rem;
-    }
-    /* Exercise Styles */
-    .main-exercise-container {
-        flex-direction: column;
-    }
-    .exercise-card {
-        width: 100%;
-    }
+  .content-wrapper {
+    margin: 1rem;
+  }
+  .exercise-hero {
+    margin-bottom: 2rem;
+  }
+  .profile-card {
+    padding: unset;
+  }
+  .profile-name {
+    padding: 1rem 0;
+  }
+  .profile-info-card {
+    margin: 0.2rem;
+  }
+  .profile-info {
+    padding: 0.5rem;
+  }
+  .login-form {
+    width: 100%;
+  }
+  .signup-form {
+    width: 100%;
+  }
+  .img-caption {
+    font-size: 1rem;
+  }
+  .author-caption {
+    font-size: 0.5rem;
+  }
+  .phrase-h1 {
+    font-size: 3rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  .phrase-h3 {
+    font-size: 1.5rem;
+    padding-left: 4rem;
+  }
+  .btn-container {
+    padding-top: 3rem;
+  }
+  .welcome-p {
+    font-size: 1.2rem;
+  }
+  /* dashboard Styles */
+  .dashboard-routine-title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .dashboard-routine-card,
+  .routine-card {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .title-h5 {
+    padding-bottom: 1rem;
+  }
+  .user-details {
+    padding: unset;
+  }
+  .routine-section {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+  .target-section {
+    border: none;
+    width: 100%;
+  }
+  .target-title {
+    border-bottom: none;
+  }
+  .card-title,
+  .target-title {
+    padding: 1rem;
+    border-top: 2px solid #acacac;
+    border-bottom: 2px solid #acacac;
+  }
+  .card-title,
+  .target-title {
+    margin: 1rem 0;
+  }
+  .card-title {
+    padding-top: 1rem;
+  }
+  .targets-h5 {
+    padding-bottom: 0rem;
+    padding-top: 1rem;
+  }
+  .target-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .routine-info-card {
+    padding: 0.5rem;
+    width: 7rem;
+  }
+  .date-h6 {
+    text-align: center;
+  }
+  .btn-routine-title {
+    padding-bottom: 1rem;
+  }
+  .routine-info-container {
+    width: 5rem;
+    height: 5rem;
+  }
+  .routine-container {
+    padding: 0;
+  }
+  .routine-details {
+    padding: 0;
+  }
+  .routine-name-container {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  /* Exercise Styles */
+  .main-exercise-container {
+    flex-direction: column;
+  }
+  .exercise-card {
+    width: 100%;
+  }
 }
