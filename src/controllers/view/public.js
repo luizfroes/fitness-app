@@ -7,10 +7,10 @@ const renderLogin = (req, res) => {
 
 const renderHome = (req, res) => {
   const { loggedIn } = req.session;
-  if (!loggedIn) {
-    return res.render("home");
-  }
-  res.render("dashboard");
+
+  const { firstName, lastName } = req.session.user;
+
+  return res.render("home", { loggedIn, firstName, lastName });
 };
 
 const renderSignUp = (req, res) => {
@@ -59,7 +59,6 @@ const renderRoutine = async (req, res) => {
   });
 
   const routine = routineData.get({ plain: true });
-  console.log(routine);
   res.render("routine", { loggedIn, routine, id });
 };
 

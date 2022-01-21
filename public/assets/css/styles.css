@@ -65,6 +65,26 @@ body {
   font-size: 0.8rem;
 }
 
+.welcome-container {
+  padding-top: 2rem;
+}
+
+.welcome-p,
+.welcome-p-2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.5;
+  padding-bottom: 0.5rem;
+}
+
+.welcome-p {
+  padding-left: 18rem;
+}
+
+.welcome-p-2 {
+  padding-left: 35rem;
+}
+
 /* homepage buttons styles */
 .btn-container {
   display: flex;
@@ -781,6 +801,23 @@ body {
     padding-top: 4rem;
   }
 
+  .welcome-container {
+    padding-top: 5rem;
+  }
+
+  .welcome-p,
+  .welcome-p-2 {
+    padding-bottom: 2rem;
+  }
+
+  .welcome-p {
+    padding-left: 15rem;
+  }
+
+  .welcome-p-2 {
+    padding-left: 25rem;
+  }
+
   /* Dashboard Styles */
   .dashboard-wrapper,
   .routine-wrapper {
@@ -877,6 +914,7 @@ body {
   .phrase-h1 {
     font-size: 3rem;
     padding-left: 1rem;
+    font-size: 1.5rem;
   }
 
   .phrase-h3 {
@@ -891,6 +929,24 @@ body {
   .login-btn,
   .signup-btn {
     width: 75%;
+  }
+
+  .welcome-container {
+    padding-top: 5rem;
+  }
+
+  .welcome-p,
+  .welcome-p-2 {
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .welcome-p {
+    padding-left: 2rem;
+  }
+
+  .welcome-p-2 {
+    padding-left: 10rem;
   }
 
   /* dashboard Styles */
