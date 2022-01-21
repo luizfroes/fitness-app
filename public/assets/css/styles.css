@@ -436,6 +436,7 @@ body {
 
 .btn-routine-title:hover {
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .author-h6 {

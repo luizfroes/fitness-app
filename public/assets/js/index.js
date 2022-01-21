@@ -10,8 +10,21 @@ const logoutYesBtn = $(`#yes-logout`);
 
 const loginFormElement = $("#login-form");
 
+const loginBtn = $("#login-btn");
+
+const signupBtn = $("#signup-btn");
+
 const logoutNoBtn = $(`#no-logout`);
+
 const renderCreateRoutineButton = $("#create-new-routine");
+
+const goToLogin = () => {
+  window.location.replace("/login");
+};
+
+const goToSignup = () => {
+  window.location.replace("/sign-up");
+};
 
 const handleLogin = async (event) => {
   event.preventDefault();
@@ -179,6 +192,10 @@ const renderCreateRoutine = (event) => {
   window.location.replace("/create-routine");
 };
 
+loginBtn.on("click", goToLogin);
+
+signupBtn.on("click", goToSignup);
+
 signUpFormElement.on("submit", handleSignUp);
 
 logoutYesBtn.on("click", handleYesLogout);
@@ -190,6 +207,9 @@ targetSearch.on("click", handleExTarget);
 addToRoutine.on("click", handleAddToRoutine);
 
 loginFormElement.on("submit", handleLogin);
+
 logoutNoBtn.on("click", handleNoLogout);
+
 renderCreateRoutineButton.on("click", renderCreateRoutine);
+
 $(`.btn-routine-title`).on("click", goToRoutine);

@@ -7,7 +7,10 @@ const renderLogin = (req, res) => {
 
 const renderHome = (req, res) => {
   const { loggedIn } = req.session;
-  res.render("home", { loggedIn });
+  if (!loggedIn) {
+    return res.render("home");
+  }
+  res.render("dashboard");
 };
 
 const renderSignUp = (req, res) => {
