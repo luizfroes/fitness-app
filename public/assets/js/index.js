@@ -1,8 +1,6 @@
-// console.log("Hello, world!!");
-
 const targetSearch = $("#exTargetBtn");
 
-const addToRoutine = $("#addToRoutineBtns");
+const addToRoutine = $("#addToRoutineBtn");
 
 const signUpFormElement = $("#signup-form");
 
@@ -18,6 +16,8 @@ const logoutNoBtn = $(`#no-logout`);
 
 const renderCreateRoutineButton = $("#create-new-routine");
 
+const createRoutineFormElement = $("#create-form");
+
 const goToLogin = () => {
   window.location.replace("/login");
 };
@@ -28,8 +28,11 @@ const goToSignup = () => {
 
 const handleLogin = async (event) => {
   event.preventDefault();
+
   const email = $("#email-input").val();
+
   const password = $("#password-input").val();
+
   if (!email) {
     alert("Please provide an email and password");
   } else if (!password) {
@@ -45,8 +48,11 @@ const handleLogin = async (event) => {
         password,
       }),
     });
+
     const data = await response.json();
+
     console.log(data);
+
     if (data.success) {
       alert("Login Successful");
       window.location.replace("/dashboard");
@@ -156,6 +162,41 @@ const handleNoLogout = () => {
   window.location.replace("/dashboard");
 };
 
+const handleCreateRoutine = async (event) => {
+  event.preventDefault();
+
+  const routineName = $("#routine-name").val();
+  const routineDate = $("#routine-date").val();
+  const routineStart = $("#routine-start").val();
+  const routineEnd = $("#routine-end").val();
+
+  if (!routineName) {
+    alert("Please enter a routine name.");
+  } else if (!routineDate) {
+    alert("Please enter a date");
+  } else if (!routineStart) {
+    alert("Please enter a start time");
+  } else if (!routineEnd) {
+    alert("Please enter a end time");
+  }
+
+  const response = await fetch("/api/routines", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      routineName,
+      routineDate,
+      routineStart,
+      routineEnd,
+    }),
+  });
+
+  const data = await response.json();
+  console.log(data);
+};
+
 const handleAddToRoutine = async (event) => {
   const target = $(event.target);
 
@@ -211,5 +252,7 @@ loginFormElement.on("submit", handleLogin);
 logoutNoBtn.on("click", handleNoLogout);
 
 renderCreateRoutineButton.on("click", renderCreateRoutine);
+
+createRoutineFormElement.on("submit", handleCreateRoutine);
 
 $(`.btn-routine-title`).on("click", goToRoutine);
