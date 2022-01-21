@@ -46,7 +46,7 @@
           <section class="exercise-container">
             <div class="cards">
               {{#each routine.exercises as |exercise|}}
-              {{> routineExerciseCard}}
+              {{> routineExerciseCard parent=../routine.user.id}}
               {{/each}}
             </div>
           </section>

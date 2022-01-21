@@ -7,7 +7,10 @@ const renderLogin = (req, res) => {
 
 const renderHome = (req, res) => {
   const { loggedIn } = req.session;
-  res.render("home", { loggedIn });
+
+  const { firstName, lastName } = req.session.user;
+
+  return res.render("home", { loggedIn, firstName, lastName });
 };
 
 const renderSignUp = (req, res) => {
@@ -39,7 +42,7 @@ const renderRoutines = async (req, res) => {
 };
 
 const renderRoutine = async (req, res) => {
-  const { loggedIn } = req.session;
+  const { loggedIn, id } = req.session;
 
   const routineData = await Routine.findByPk(req.params.id, {
     include: [
@@ -56,8 +59,7 @@ const renderRoutine = async (req, res) => {
   });
 
   const routine = routineData.get({ plain: true });
-  console.log(routine);
-  res.render("routine", { loggedIn, routine });
+  res.render("routine", { loggedIn, routine, id });
 };
 
 const renderExercises = async (req, res) => {

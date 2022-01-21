@@ -13,6 +13,7 @@ const renderDashboard = async (req, res) => {
   const weather = await getCurrentWeather(user.location);
   const weatherIcon = weather.weather[0].icon;
 
+  console.log(user.location);
   const quote = await getQuote();
 
   const routines = await Routine.findAll({
