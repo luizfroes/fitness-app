@@ -4,6 +4,7 @@
   {{> homeNavBar}}
   {{/if}}</header>
 <main>
+  <section>
   <div class="phrase-container">
     <h1 class="phrase-h1">BEING</h1>
     <h3 class="phrase-h3">TONED IS IN STYLE...</h3>
@@ -104,4 +105,16 @@
   {{else}}
   {{> homeButtons}}
   {{/if}}
+  </section>
+  <section class="exercise-hero">
+          <h1>Published Routines</h1>
+      </section>
+  <section class="content-wrapper">
+    <section class="home-container">
+      {{#each topFiveRoutines}}
+        {{> routineCard}}
+      {{/each}}
+    </section>
+    
+  </section>
 </main>
