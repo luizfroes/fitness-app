@@ -1,16 +1,19 @@
-<div class="card" style="width: 18rem;">
-  <img src={{gifUrl}} class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">{{target}} :: {{bodyPart}}</p>
-    <button
-      data-target="{{target}}"
-      data-id="{{id}}"
-      data-exercise="{{name}}"
-      data-gifUrl="{{gifUrl}}"
-      class="btn btn-primary"
-    >Add to routine</button>
-  </div>
+<div class="exercise-card">
+	<img src={{gifUrl}} alt="..." class="exercise-card-img" />
+	<div class="exercise-card-body">
+		<div class="card-text">
+			<h5 class="card-title">{{name}}</h5>
+			<p class="card-text">{{target}} :: {{bodyPart}}</p>
+		</div>
+
+		<button
+			data-target="{{target}}"
+			data-id="{{id}}"
+			data-exercise="{{name}}"
+			data-gifUrl="{{gifUrl}}"
+			class="btn btn-primary"
+		>Add to routine</button>
+	</div>
 </div>
 
 {{!-- ({target:'{{target}}', id:'{{id}}', exercise_name:'{{name}}', image:'{{gifUrl}}'})" --}}
