@@ -21,6 +21,15 @@ body {
   justify-content: space-around;
 }
 
+/* nav-bar Styles */
+.navbar-brand {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.navbar-brand:hover {
+  font-weight: lighter;
+}
+
 /* Home Styles */
 .phrase-container {
   opacity: 0.5;

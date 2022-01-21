@@ -8,9 +8,12 @@ const renderLogin = (req, res) => {
 const renderHome = (req, res) => {
   const { loggedIn } = req.session;
 
-  const { firstName, lastName } = req.session.user;
+  if (loggedIn) {
+    const { firstName, lastName } = req.session.user;
 
-  return res.render("home", { loggedIn, firstName, lastName });
+    return res.render("home", { loggedIn, firstName, lastName });
+  }
+  res.render("home", { loggedIn });
 };
 
 const renderSignUp = (req, res) => {
