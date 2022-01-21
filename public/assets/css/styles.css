@@ -39,11 +39,9 @@ body {
 
 .carousel-caption {
   right: 0%;
-  padding-bottom: 0px;
   padding-top: 0px;
   padding-left: 0rem;
-  left: 40%;
-  bottom: 20px;
+  bottom: 30%;
 }
 
 .carousel-img {
@@ -78,15 +76,15 @@ body {
 }
 
 .welcome-p {
-  padding-left: 18rem;
+  padding-left: 55rem;
 }
 
 .welcome-p-2 {
-  padding-left: 35rem;
+  padding-left: 65rem;
 }
 
 /* homepage buttons styles */
-.btn-container {
+.home-btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,6 +148,12 @@ body {
 
 .signup-btn:focus {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+}
+
+/* logout buttons styles */
+.yes-logout-btn,
+.no-logout-btn {
+  width: 8rem;
 }
 
 /* Dashboard Styles */
@@ -811,11 +815,11 @@ body {
   }
 
   .welcome-p {
-    padding-left: 15rem;
+    padding-left: 20rem;
   }
 
   .welcome-p-2 {
-    padding-left: 25rem;
+    padding-left: 30rem;
   }
 
   /* Dashboard Styles */
