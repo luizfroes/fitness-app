@@ -2,54 +2,71 @@
   {{> privateNavBar}}
   {{else}}
   {{> publicNavBar}}
-  {{/if}}</header>
+  {{/if}}
+</header>
 
 <main>
-    <h1>Exercises Page</h1>
+  <section class="exercise-hero">
+    <h1>Search for an Exercise</h1>
+  </section>
 
-    <div>
+
+  <section class="exercise-wrapper">
+
+    <aside class="exercise-aside-container">
+      <form class="search-exercise">
+        <label for="exTarget">Choose a body target:</label>
+        <select name="exerciseTarget" id="exTarget">
+          <option value="abductors">Abductors</option>
+          <option value="abs">Abs</option>
+          <option value="adductors">Adductors</option>
+          <option value="biceps">Biceps</option>
+          <option value="calves">Calves</option>
+          <option value="cardiovascular system">Cardiovascular system</option>
+          <option value="delts">Delts</option>
+          <option value="forearms">Forearms</option>
+          <option value="glutes">Glutes</option>
+          <option value="hamstrings">Hamstrings</option>
+          <option value="lats">Lats</option>
+          <option value="levator scapulae">Levator scapulae</option>
+          <option value="pectorals">Pectorals</option>
+          <option value="quads">Quads</option>
+          <option value="serratus anterior">Serratus anterior</option>
+          <option value="spine">Spine</option>
+          <option value="traps">Traps</option>
+          <option value="triceps">Triceps</option>
+          <option value="upper back">Upper back</option>
+        </select>
+        <input type="submit" value="Search" id="exTargetBtn">
+      </form>
+
+      <section>
         <form>
-  <label for="exTarget">Choose a body target:</label>
-  <select name="exerciseTarget" id="exTarget">
-    <option value="abductors">Abductors</option>
-    <option value="abs">Abs</option>
-    <option value="adductors">Adductors</option>
-    <option value="biceps">Biceps</option>
-    <option value="calves">Calves</option>
-    <option value="cardiovascular system">Cardiovascular system</option>
-    <option value="delts">Delts</option>
-    <option value="forearms">Forearms</option>
-    <option value="glutes">Glutes</option>
-    <option value="hamstrings">Hamstrings</option>
-    <option value="lats">Lats</option>
-    <option value="levator scapulae">Levator scapulae</option>
-    <option value="pectorals">Pectorals</option>
-    <option value="quads">Quads</option>
-    <option value="serratus anterior">Serratus anterior</option>
-    <option value="spine">Spine</option>
-    <option value="traps">Traps</option>
-    <option value="triceps">Triceps</option>
-    <option value="upper back">Upper back</option>
-  </select>
-  <br><br>
-  <input type="submit" value="Search" id="exTargetBtn">
-</form>
-    </div>
+          <label for="routineTarget">Select a routine:</label>
+          <select name="routineTarget" id="routTarget">
+            {{#each routines}}
+              {{> routineSelection}}
+              {{/each}}
+          </select>
+        </form>
+      </section>
+    </aside>
 
-     <div>
-        <form>
-  <label for="routineTarget">Select a routine:</label>
-  <select name="routineTarget" id="routTarget">
-    {{#each routines}}
-      {{> routineSelection}}
-      {{/each}}
-  </select>
-  <br><br>
-</form>
-    </div>
-
-    <div id="addToRoutineBtns">
+    <section class="main-exercise-container" id="addToRoutineBtns">
+      {{#if selected}}
       {{#each selected}}
       {{> exerciseCards}}
-      {{/each}}</div>
+      {{/each}}
+      {{else}}
+      <section class="main-exercise-container">
+        <div class="no-exercise-card">
+          <h3>Please choose a target...</h3>
+        </div>
+      </section>
+      {{/if}}
+    </section>
+  
+  </section>
+
+
 </main>

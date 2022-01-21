@@ -1,51 +1,53 @@
-<section class="routine-card mb-4">
-  <div class="routine-section">
-    <div class="routine-title">
-      <button class="btn-routine-title" id="routine-btn" data-id={{id}}>
-        Routine Name 1
-      </button>
-      <h6 class="author-h6 text-center">{{user.first_name}}
-        {{user.last_name}}</h6>
-    </div>
-    <h5 class="routine-date-card text-center align-middle">{{formatDate
-        createdAt
-      }}</h5>
-    <div class="routine-info">
-      <div class="routine-info-card">
-        <div class="routine-info-card-content">
-          <h4 class="info-h4">
-            {{routineLength time_start time_end}}</h4>
-        </div>
-        <div class="routine-info-card-title">
-          <p>Minutes</p>
-        </div>
-      </div>
-      <div class="routine-info-card">
-        <div class="routine-info-card-content">
-          <h4 class="info-h4">750kcal</h4>
-        </div>
-        <div class="routine-info-card-title">
-          <p>Est. Calories</p>
-        </div>
-      </div>
-      <div class="routine-info-card">
-        <div class="routine-info-card-content">
-          <h4 class="info-h4">{{exercises.length}}</h4>
-        </div>
-        <div class="routine-info-card-title">
-          <p>Exercises</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="target-section">
-    <div class="target-title">
-      <h5 class="targets-h5">Targets</h5>
-    </div>
-    <div class="target-info">
-      <div>Arms</div>
-      <div>Legs</div>
-      <div>Chest</div>
-    </div>
-  </div>
+<section class="routine-card">
+	<div class="routine-section">
+		<div class="routine-title">
+			<button class="btn-routine-title" id="routine-btn" data-id={{id}}>
+				Routine Name 1
+			</button>
+			<h6 class="author-h6 text-center">
+				Created by:
+				{{user.first_name}}
+				{{user.last_name}}</h6>
+		</div>
+		<h5 class="routine-date-card text-center align-middle">{{formatDate
+				createdAt
+			}}</h5>
+		<div class="routine-info">
+			<div class="routine-info-card">
+				<div class="routine-info-card-content">
+					<h4 class="info-h4">
+						{{routineLength time_start time_end}}</h4>
+				</div>
+				<div class="routine-info-card-title">
+					<p>Minutes</p>
+				</div>
+			</div>
+			<div class="routine-info-card">
+				<div class="routine-info-card-content">
+					<h4 class="info-h4">750kcal</h4>
+				</div>
+				<div class="routine-info-card-title">
+					<p>Est. Calories</p>
+				</div>
+			</div>
+			<div class="routine-info-card">
+				<div class="routine-info-card-content">
+					<h4 class="info-h4">{{exercises.length}}</h4>
+				</div>
+				<div class="routine-info-card-title">
+					<p>Exercises</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="target-section">
+		<div class="target-title">
+			<h5 class="targets-h5">Targets</h5>
+		</div>
+		<div class="target-info">
+			{{#each exercises}}
+				<div>{{this.target}}</div>
+			{{/each}}
+		</div>
+	</div>
 </section>

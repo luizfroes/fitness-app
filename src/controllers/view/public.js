@@ -1,19 +1,34 @@
+const { returnRandomArrayElements } = require("../../helpers");
 const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
-const { getExercisesByTarget, getRoutinesByUser } = require("../api");
+const {
+  getExercisesByTarget,
+  getRoutinesByUser,
+  getAllRoutines,
+} = require("../api");
 
 const renderLogin = (req, res) => {
   res.render("login");
 };
 
-const renderHome = (req, res) => {
+const renderHome = async (req, res) => {
   const { loggedIn } = req.session;
 
-  if (loggedIn) {
+  const routines = await getAllRoutines();
+
+  const topFiveRoutines = returnRandomArrayElements(routines, 5);
+
+  if (!loggedIn) {
+    return res.render("home", { topFiveRoutines });
+  } else {
     const { firstName, lastName } = req.session.user;
 
-    return res.render("home", { loggedIn, firstName, lastName });
+    return res.render("home", {
+      loggedIn,
+      firstName,
+      lastName,
+      topFiveRoutines,
+    });
   }
-  res.render("home", { loggedIn });
 };
 
 const renderSignUp = (req, res) => {
@@ -66,27 +81,31 @@ const renderRoutine = async (req, res) => {
 };
 
 const renderExercises = async (req, res) => {
-  res.render("exercises");
+  const { loggedIn } = req.session;
+
+  if (!loggedIn) {
+    return res.render("exercises");
+  } else {
+    return res.render("exercises", { loggedIn });
+  }
 };
 
 const renderExercise = async (req, res) => {
-  //   console.log(req.params.target);
-  const selected = await getExercisesByTarget(req.params.target);
-  //   console.log(selected);
-  //   console.log(req.session);
-  const routines = await getRoutinesByUser(req);
-  res.render("exercises", { selected, routines });
-};
+  const { loggedIn } = req.session;
 
-const renderExerciseByTarget = async (req, res) => {
-  //   console.log(req.params.target);
-  const selected = await getExercisesByTarget(req.params.target);
-  //   console.log(selected);
-  //   console.log(req.session);
-  const routines = await getRoutinesByUser(req);
-  res.render("exercises", { selected, routines });
+  if (!loggedIn) {
+    const selected = await getExercisesByTarget(req.params.target);
+    return res.render("exercises", { selected });
+  } else {
+    const selected = await getExercisesByTarget(req.params.target);
+    const routines = await getRoutinesByUser(req);
+    return res.render("exercises", {
+      selected,
+      routines,
+      loggedIn,
+    });
+  }
 };
-
 module.exports = {
   renderHome,
   renderLogin,
@@ -95,5 +114,4 @@ module.exports = {
   renderExercises,
   renderRoutine,
   renderRoutines,
-  renderExerciseByTarget,
 };
