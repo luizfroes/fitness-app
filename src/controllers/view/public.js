@@ -1,16 +1,29 @@
+const { returnRandomArrayElements } = require("../../helpers");
 const { Routine, Exercise, ExerciseRoutine, User } = require("../../models");
-const { getExercisesByTarget, getRoutinesByUser } = require("../api");
+const {
+    getExercisesByTarget,
+    getRoutinesByUser,
+    getAllRoutines,
+} = require("../api");
 
 const renderLogin = (req, res) => {
     res.render("login");
 };
 
-const renderHome = (req, res) => {
+const renderHome = async(req, res) => {
     const { loggedIn } = req.session;
 
-    const { firstName, lastName } = req.session.user;
+    const routines = await getAllRoutines();
 
-    return res.render("home", { loggedIn, firstName, lastName });
+    const topFiveRoutines = returnRandomArrayElements(routines, 5);
+
+    if (!loggedIn) {
+        return res.render("home", { topFiveRoutines });
+    } else {
+        const { firstName, lastName } = req.session.user;
+
+        return res.render("home", { loggedIn, firstName, lastName, topFiveRoutines });
+    }
 };
 
 const renderSignUp = (req, res) => {
