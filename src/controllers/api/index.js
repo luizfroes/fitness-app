@@ -143,6 +143,14 @@ const getExercisesByTarget = async(req, res) => {
 
 const createExercise = async(req, res) => {
     try {
+        if (!req.session.loggedIn) {
+            return res.status(401).json({
+                success: false,
+                status: 401,
+                error: "Please log in to add exercise",
+            });
+        }
+
         const payload = getPayloadWithValidFieldsOnly(
             ["exercise_name", "image", "target", "routine_id"],
             req.body
