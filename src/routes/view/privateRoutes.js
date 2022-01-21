@@ -2,11 +2,7 @@ const { Router } = require("express");
 
 const {
     renderLogout,
-    renderRoutine,
-    renderExercises,
-    renderExercise,
     renderDashboard,
-    renderExerciseByTarget,
     renderCreateRoutine,
 } = require("../../controllers/view/private");
 
