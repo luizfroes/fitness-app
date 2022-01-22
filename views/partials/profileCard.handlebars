@@ -5,20 +5,21 @@
         <img src="https://via.placeholder.com/150" />
       </a>
     </div>
-    <div>Darion Richards</div>
+    <div>{{user.firstName}}
+      {{user.lastName}}</div>
   </section>
   <section class="user-details">
     <div class="profile-info-card">
       <h6 class="profile-info">Age</h6>
-      <p class="profile-info">35</p>
+      <p class="profile-info">{{user.age}}</p>
     </div>
     <div class="profile-info-card">
       <h6 class="profile-info">Height</h6>
-      <p class="profile-info">75cm</p>
+      <p class="profile-info">{{user.height}}cm</p>
     </div>
     <div class="profile-info-card">
       <h6 class="profile-info">Weight</h6>
-      <p class="profile-info">80kg</p>
+      <p class="profile-info">{{user.weight}}kg</p>
     </div>
   </section>
 </section>
@@ -29,12 +30,4 @@
   <div class="profile-padding">Sleep</div>
   <div class="profile-padding">Running</div>
   <div class="profile-padding">Loose Weight</div>
-</section>
-<section class="user-goals">
-  <div class="profile-padding">
-    <h5>Upcoming Routines</h5>
-  </div>
-  <div class="profile-padding">Routine 1</div>
-  <div class="profile-padding">Routine 2</div>
-  <div class="profile-padding">Routine 3</div>
 </section>

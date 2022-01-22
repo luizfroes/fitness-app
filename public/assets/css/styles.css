@@ -39,6 +39,14 @@ body {
   border-right: unset;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.navbar-brand:hover {
+  font-weight: bolder;
+}
+
 /* Home Styles */
 
 .home-container {
@@ -417,7 +425,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
   padding: 0.5rem 0;
   border-bottom: 1px solid black;
 }
@@ -465,6 +472,7 @@ body {
 .routine-card {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1rem;
   background-color: lightgray;
   border-radius: 0.3rem;
@@ -933,8 +941,13 @@ body {
     padding: 1rem;
     gap: 1rem;
   }
+
+  .routine-info-container {
+    width: 12rem;
+    height: 5rem;
+  }
   .routine-info-card {
-    width: 140px;
+    width: 20%;
   }
   .routine-container-info {
     flex-direction: row;
@@ -948,6 +961,15 @@ body {
   }
   .cards {
     justify-content: center !important;
+  }
+
+  .info-h4 {
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+
+  .routine-wrapper {
+    flex-direction: column;
   }
   /* Form Styles */
   .form {
@@ -1033,7 +1055,9 @@ body {
   .routine-card {
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+  }
+
+  .dashboard-routine-card {
     height: 100%;
   }
   .title-h5 {
@@ -1076,20 +1100,28 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .routine-info-container {
+    width: 8rem;
+    height: 5rem;
+  }
+
+  .routine-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .routine-info-card {
     padding: 0.5rem;
-    width: 7rem;
+    width: 70%;
   }
+
   .date-h6 {
     text-align: center;
   }
   .btn-routine-title {
     padding-bottom: 1rem;
   }
-  .routine-info-container {
-    width: 5rem;
-    height: 5rem;
-  }
+
   .routine-container {
     padding: 0;
   }
