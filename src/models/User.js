@@ -46,10 +46,7 @@ User.init(
         len: [8, 20],
       },
     },
-    avatar: {
-      type: DataTypes.BLOB,
-      allowNull: false,
-    },
+
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,

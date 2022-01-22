@@ -1,10 +1,12 @@
 <section class="routine-card">
   <div class="routine-section">
     <div class="routine-title">
-      <button class="btn-routine-title" id="routine-btn" data-id={{id}}>
-        Routine Name 1
-      </button>
-      <h6 class="author-h6 text-center">
+      <div>
+        <button class="btn-routine-title" id="routine-btn" data-id={{id}}>
+          {{name}}
+        </button>
+      </div>
+      <h6 class="px-2">
         Created by:
         {{user.first_name}}
         {{user.last_name}}</h6>
