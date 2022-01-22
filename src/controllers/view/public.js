@@ -83,10 +83,12 @@ const renderRoutine = async (req, res) => {
 const renderExercises = async (req, res) => {
   const { loggedIn } = req.session;
 
+  const routines = await getRoutinesByUser(req);
+
   if (!loggedIn) {
     return res.render("exercises");
   } else {
-    return res.render("exercises", { loggedIn });
+    return res.render("exercises", { loggedIn, routines });
   }
 };
 

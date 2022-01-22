@@ -2,15 +2,15 @@
   <div class="routine-section">
     <div class="routine-title">
       <h5>{{this.name}}</h5>
-      <h6>{{this.date}}</h6>
+      <h6>{{formatDate this.date}}</h6>
     </div>
     <div class="routine-info">
       <div class="routine-info-card">
         <div class="routine-info-card-content">
-          <h4>60mins</h4>
+          <h4>{{routineLength time_start time_end}}</h4>
         </div>
         <div class="routine-info-card-title">
-          <p>Length</p>
+          <p>Minutes</p>
         </div>
       </div>
       <div class="routine-info-card">
@@ -23,7 +23,7 @@
       </div>
       <div class="routine-info-card">
         <div class="routine-info-card-content">
-          <h4>6</h4>
+          <h4>{{exercises.length}}</h4>
         </div>
         <div class="routine-info-card-title">
           <p>Exercises</p>

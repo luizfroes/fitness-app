@@ -6,7 +6,7 @@ const moment = require("moment");
 
 module.exports = {
   formatDate: function (date) {
-    return moment(date).format("dddd MMMM Do YYYY");
+    return moment(date).format("Do MMM YY");
   },
 
   routineLength: function (time1, time2) {
